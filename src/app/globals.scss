@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$primary: #ffffff;
+$secondary: #001534;
+$tertiary: #003483;
+
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 7%;
+    padding-left: 13%;
+    width: 50%;
+}
+
+
+
+.title {
+    margin: 0;
+    line-height: 1.25;
+    background: linear-gradient(to right, #000000, #7281CF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    // font-family: "outfit";
+    // font-size: 115px;
+}
+.subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
