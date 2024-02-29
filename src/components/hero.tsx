@@ -1,8 +1,8 @@
 import React from "react";
-
+import MiniProjects from "./mini-projects";
 const HeroSection = () => {
   return (
-    <section className="">
+    <section className="hero-section">
         <div className="title-container">
           <span className="title text-[150px]">Benjamin</span>
           <span className="title text-[115px]">Schoolland</span>
@@ -11,6 +11,7 @@ const HeroSection = () => {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
             </p>
         </div>
+        <MiniProjects />
        
     </section>
   );
