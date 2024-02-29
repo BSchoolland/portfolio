@@ -3,6 +3,9 @@ import MiniProjects from "./mini-projects";
 const HeroSection = () => {
   return (
     <section className="hero-section">
+        <div className="corner"> 
+            <h1>hi there</h1>
+        </div>
         <div className="title-container">
           <span className="title text-[150px]">Benjamin</span>
           <span className="title text-[115px]">Schoolland</span>
@@ -12,7 +15,6 @@ const HeroSection = () => {
             </p>
         </div>
         <MiniProjects />
-       
     </section>
   );
 };

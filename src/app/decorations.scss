@@ -1,0 +1,41 @@
+
+// a decorative div that goes in the top right corner of the screen, at 45 degrees
+.corner  {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background-color: $tertiary;
+    transform: rotate(45deg);
+    margin-right: -150px;
+    margin-top: -150px;
+    z-index: -1;
+}
+
+// another div that goes between the hero section and the skills section
+.slant {
+    margin-top: 50px;
+    width: 100%;
+    // a gradient background that goes from the secondary color to the tertiary color
+    background: linear-gradient(30deg, $secondary 50%, $tertiary 110%);    
+    transform: skewY(-8deg);
+    z-index: -1;
+}
+
+.inverse-slant {
+    padding-top: 10vw; // the padding accounts for the skewing
+    width: 100%;
+    transform: skewY(8deg);
+    z-index: -1;
+}
+
+.decorative-slant {
+    margin-top: 8vw; // balance the padding of the inverse-slant
+    margin-bottom: -8vw; // the margin accounts for the skewing
+    width: 30%;
+    height: 100px;
+    background-color: $tertiary;
+    transform: skewY(-8deg);
+    z-index: -1;
+}

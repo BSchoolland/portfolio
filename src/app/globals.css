@@ -1,11 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background-color: #003483;
+  transform: rotate(45deg);
+  margin-right: -150px;
+  margin-top: -150px;
+  z-index: -1;
+}
+
+.slant {
+  margin-top: 50px;
+  width: 100%;
+  background: linear-gradient(30deg, #001534 50%, #003483 110%);
+  transform: skewY(-8deg);
+  z-index: -1;
+}
+
+.inverse-slant {
+  padding-top: 10vw;
+  width: 100%;
+  transform: skewY(8deg);
+  z-index: -1;
+}
+
+.decorative-slant {
+  margin-top: 8vw;
+  margin-bottom: -8vw;
+  width: 30%;
+  height: 100px;
+  background-color: #003483;
+  transform: skewY(-8deg);
+  z-index: -1;
+}
+
 .hero-section {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  height: 100vh;
 }
 
 .title-container {
@@ -35,11 +72,11 @@
 
 .mini-projects-container {
   display: flex;
-  margin-top: 7%;
+  margin-top: 4%;
   margin-left: 10%;
-  width: 30%;
+  width: 25%;
   height: 0;
-  padding-bottom: 30%;
+  padding-bottom: 25%;
   background-color: #001534;
   border-radius: 30px;
 }
