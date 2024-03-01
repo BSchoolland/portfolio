@@ -1,89 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.corner {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 300px;
-  background-color: #003483;
-  transform: rotate(45deg);
-  margin-right: -150px;
-  margin-top: -150px;
-  z-index: -1;
-}
-
-.slant {
-  margin-top: 50px;
-  width: 100%;
-  background: linear-gradient(30deg, #001534 50%, #003483 110%);
-  transform: skewY(-8deg);
-  z-index: -1;
-}
-
-.inverse-slant {
-  padding-top: 10vw;
-  width: 100%;
-  transform: skewY(8deg);
-  z-index: -1;
-}
-
-.decorative-slant {
-  position: relative;
-  margin-top: 8vw;
-  margin-bottom: -8vw;
-  width: 30%;
-  height: 100px;
-  background-color: #003483;
-  transform: skewY(-8deg);
-  z-index: 100;
-}
-
-.top-down-stripe-1 {
-  position: absolute;
-  width: 3px;
-  height: 200%;
-  background-color: #ffffff;
-  top: 0;
-  left: 8%;
-  transform: translateX(-8%);
-  z-index: -1;
-}
-
-.top-down-stripe-2 {
-  position: absolute;
-  width: 3px;
-  height: 200%;
-  background-color: #ffffff;
-  top: 0;
-  right: 8%;
-  transform: translateX(8%);
-  z-index: -1;
-}
-
-.top-down-stripe-3 {
-  position: absolute;
-  width: 3px;
-  height: 200%;
-  background-color: #ffffff;
-  top: 0;
-  left: 35%;
-  transform: translateX(-35%);
-  z-index: -1;
-}
-
-.top-down-stripe-4 {
-  position: absolute;
-  width: 3px;
-  height: 200%;
-  background-color: #ffffff;
-  top: 0;
-  right: 35%;
-  transform: translateX(35%);
-  z-index: -1;
-}
-
 .hero-section {
   display: flex;
   flex-direction: row;
@@ -158,6 +75,103 @@
   font-weight: 900;
   margin: 10px;
   text-align: right;
+}
+
+.corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background-color: #003483;
+  transform: rotate(45deg);
+  margin-right: -150px;
+  margin-top: -150px;
+  z-index: -1;
+}
+
+.slant {
+  margin-top: 50px;
+  width: 100%;
+  background: linear-gradient(30deg, #001534 50%, #003483 110%);
+  transform: skewY(-8deg);
+  z-index: -1;
+}
+
+.inverse-slant {
+  padding-top: 10vw;
+  width: 100%;
+  transform: skewY(8deg);
+  z-index: -1;
+}
+
+.decorative-slant {
+  position: relative;
+  margin-top: 8vw;
+  margin-bottom: -8vw;
+  width: 30%;
+  height: 100px;
+  background-color: #003483;
+  transform: skewY(-8deg);
+  z-index: 100;
+}
+
+.top-down-stripe-1 {
+  position: absolute;
+  width: 2px;
+  height: 200%;
+  background-color: #ffffff;
+  top: 0;
+  left: 8%;
+  transform: translateX(-8%);
+  z-index: -1;
+}
+
+.top-down-stripe-2 {
+  position: absolute;
+  width: 2px;
+  height: 200%;
+  background-color: #ffffff;
+  top: 0;
+  right: 8%;
+  transform: translateX(8%);
+  z-index: -1;
+}
+
+.top-down-stripe-3 {
+  position: absolute;
+  width: 2px;
+  height: 200%;
+  background-color: #ffffff;
+  top: 0;
+  left: 35%;
+  transform: translateX(-35%);
+  z-index: -1;
+}
+
+.top-down-stripe-4 {
+  position: absolute;
+  width: 2px;
+  height: 200%;
+  background-color: #ffffff;
+  top: 0;
+  right: 35%;
+  transform: translateX(35%);
+  z-index: -1;
+}
+
+.skills-title {
+  margin-left: 10%;
+  color: #00C2FF;
+  font-weight: 900;
+}
+
+.skills-subtitle {
+  margin-top: 0;
+  margin-left: 12%;
+  width: 50%;
+  color: #ffffff;
+  font-weight: 600;
 }
 
 @layer utilities {

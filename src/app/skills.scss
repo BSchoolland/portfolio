@@ -40,9 +40,10 @@
     z-index: 100;
 }
 
+$stripe-width: 2px;
 .top-down-stripe-1 {
     position: absolute;
-    width: 3px;
+    width: $stripe-width;
     height: 200%;
     background-color: $primary;
     top: 0;
@@ -53,7 +54,7 @@
 
 .top-down-stripe-2 {
     position: absolute;
-    width: 3px;
+    width: $stripe-width;
 
     height: 200%;
     background-color: $primary;
@@ -65,7 +66,7 @@
 
 .top-down-stripe-3 {
     position: absolute;
-    width: 3px;
+    width: $stripe-width;
     height: 200%;
     background-color: $primary;
 
@@ -77,7 +78,7 @@
 
 .top-down-stripe-4 {
     position: absolute;
-    width: 3px;
+    width: $stripe-width;
 
     height: 200%;
     background-color: $primary;
@@ -86,4 +87,18 @@
     right: 35%;
     transform: translateX(35%);
     z-index: -1;
+}
+
+.skills-title {
+    margin-left: 10%;
+    color: $action;
+    font-weight: 900;
+}
+
+.skills-subtitle {
+    margin-top: 0;
+    margin-left: 12%;
+    width: 50%;
+    color: $primary;
+    font-weight: 600;
 }
