@@ -30,12 +30,57 @@
 }
 
 .decorative-slant {
+  position: relative;
   margin-top: 8vw;
   margin-bottom: -8vw;
   width: 30%;
   height: 100px;
   background-color: #003483;
   transform: skewY(-8deg);
+  z-index: 100;
+}
+
+.top-down-stripe-1 {
+  position: absolute;
+  width: 3px;
+  height: 200%;
+  background-color: #ffffff;
+  top: 0;
+  left: 8%;
+  transform: translateX(-8%);
+  z-index: -1;
+}
+
+.top-down-stripe-2 {
+  position: absolute;
+  width: 3px;
+  height: 200%;
+  background-color: #ffffff;
+  top: 0;
+  right: 8%;
+  transform: translateX(8%);
+  z-index: -1;
+}
+
+.top-down-stripe-3 {
+  position: absolute;
+  width: 3px;
+  height: 200%;
+  background-color: #ffffff;
+  top: 0;
+  left: 35%;
+  transform: translateX(-35%);
+  z-index: -1;
+}
+
+.top-down-stripe-4 {
+  position: absolute;
+  width: 3px;
+  height: 200%;
+  background-color: #ffffff;
+  top: 0;
+  right: 35%;
+  transform: translateX(35%);
   z-index: -1;
 }
 

@@ -1,6 +1,5 @@
-
 // a decorative div that goes in the top right corner of the screen, at 45 degrees
-.corner  {
+.corner {
     position: absolute;
     top: 0;
     right: 0;
@@ -18,7 +17,7 @@
     margin-top: 50px;
     width: 100%;
     // a gradient background that goes from the secondary color to the tertiary color
-    background: linear-gradient(30deg, $secondary 50%, $tertiary 110%);    
+    background: linear-gradient(30deg, $secondary 50%, $tertiary 110%);
     transform: skewY(-8deg);
     z-index: -1;
 }
@@ -31,11 +30,60 @@
 }
 
 .decorative-slant {
+    position: relative;
     margin-top: 8vw; // balance the padding of the inverse-slant
     margin-bottom: -8vw; // the margin accounts for the skewing
     width: 30%;
     height: 100px;
     background-color: $tertiary;
     transform: skewY(-8deg);
+    z-index: 100;
+}
+
+.top-down-stripe-1 {
+    position: absolute;
+    width: 3px;
+    height: 200%;
+    background-color: $primary;
+    top: 0;
+    left: 8%;
+    transform: translateX(-8%);
+    z-index: -1;
+}
+
+.top-down-stripe-2 {
+    position: absolute;
+    width: 3px;
+
+    height: 200%;
+    background-color: $primary;
+    top: 0;
+    right: 8%;
+    transform: translateX(8%);
+    z-index: -1;
+}
+
+.top-down-stripe-3 {
+    position: absolute;
+    width: 3px;
+    height: 200%;
+    background-color: $primary;
+
+    top: 0;
+    left: 35%;
+    transform: translateX(-35%);
+    z-index: -1;
+}
+
+.top-down-stripe-4 {
+    position: absolute;
+    width: 3px;
+
+    height: 200%;
+    background-color: $primary;
+
+    top: 0;
+    right: 35%;
+    transform: translateX(35%);
     z-index: -1;
 }
