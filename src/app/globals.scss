@@ -12,6 +12,9 @@ $action: #00C2FF;
 @import "./hero.scss";
 @import "./skills.scss";
 
+html {
+  font-size: 1rem;
+}
 
 
 @layer utilities {

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "scss": "sass --watch src/app/globals.scss src/app/globals.css"
   },
   "dependencies": {
     "react": "^18",

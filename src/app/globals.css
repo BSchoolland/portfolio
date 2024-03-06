@@ -12,17 +12,28 @@
   flex-direction: column;
   align-items: flex-start;
   padding-top: 7%;
-  padding-left: 13%;
+  padding-left: 10%;
   width: 50%;
 }
 
-.title {
+.title1 {
   margin: 0;
   line-height: 1.25;
   background: linear-gradient(to right, #000000, #7281CF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
+  font-size: 100px;
+}
+
+.title2 {
+  margin: 0;
+  line-height: 1.25;
+  background: linear-gradient(to right, #000000, #7281CF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 80px;
 }
 
 .subtitle {
@@ -34,7 +45,7 @@
 
 .mini-projects-container {
   display: flex;
-  margin-top: 4%;
+  margin-top: 10%;
   margin-left: 10%;
   width: 25%;
   height: 0;
@@ -61,17 +72,18 @@
   font-size: 24px;
   font-weight: 900;
   margin: 10px;
+  font-size: 18px;
 }
 
 .mini-projects-description {
   color: #ffffff;
-  font-size: 18px;
+  font-size: 14px;
   margin: 30px;
 }
 
 .goto-next-project {
   color: #00C2FF;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 900;
   margin: 10px;
   text-align: right;
@@ -81,19 +93,19 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   background-color: #003483;
   transform: rotate(45deg);
-  margin-right: -150px;
-  margin-top: -150px;
+  margin-right: -100px;
+  margin-top: -100px;
   z-index: -1;
 }
 
 .slant {
   margin-top: 50px;
   width: 100%;
-  background: linear-gradient(30deg, #001534 50%, #003483 110%);
+  background: linear-gradient(30deg, #000000 50%, #003483 130%);
   transform: skewY(-8deg);
   z-index: -1;
 }
@@ -108,9 +120,9 @@
 .decorative-slant {
   position: relative;
   margin-top: 8vw;
-  margin-bottom: -8vw;
+  margin-bottom: -9vw;
   width: 30%;
-  height: 100px;
+  height: 80px;
   background-color: #003483;
   transform: skewY(-8deg);
   z-index: 100;
@@ -118,9 +130,10 @@
 
 .top-down-stripe-1 {
   position: absolute;
-  width: 2px;
+  width: 3px;
   height: 200%;
   background-color: #ffffff;
+  opacity: 0.1;
   top: 0;
   left: 8%;
   transform: translateX(-8%);
@@ -129,7 +142,8 @@
 
 .top-down-stripe-2 {
   position: absolute;
-  width: 2px;
+  width: 3px;
+  opacity: 0.1;
   height: 200%;
   background-color: #ffffff;
   top: 0;
@@ -140,23 +154,25 @@
 
 .top-down-stripe-3 {
   position: absolute;
-  width: 2px;
+  width: 3px;
   height: 200%;
   background-color: #ffffff;
+  opacity: 0.1;
   top: 0;
-  left: 35%;
-  transform: translateX(-35%);
+  left: 36%;
+  transform: translateX(-36%);
   z-index: -1;
 }
 
 .top-down-stripe-4 {
   position: absolute;
-  width: 2px;
+  width: 3px;
+  opacity: 0.1;
   height: 200%;
   background-color: #ffffff;
   top: 0;
-  right: 35%;
-  transform: translateX(35%);
+  right: 36%;
+  transform: translateX(36%);
   z-index: -1;
 }
 
@@ -164,14 +180,80 @@
   margin-left: 10%;
   color: #00C2FF;
   font-weight: 900;
+  font-size: 3rem;
 }
 
 .skills-subtitle {
-  margin-top: 0;
-  margin-left: 12%;
-  width: 50%;
+  margin: 0;
+  padding-left: 12%;
+  width: 70%;
   color: #ffffff;
   font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  flex-wrap: wrap;
+  margin-left: 8%;
+  width: 100%;
+}
+
+.skill-card {
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-top: 100px;
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+.skill-top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: nowrap;
+}
+
+.skill-image {
+  width: 50px;
+  height: auto;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.skill-name {
+  display: flex;
+  flex-wrap: nowrap;
+  color: #00C2FF;
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+.skill-title {
+  display: flex;
+  flex-wrap: nowrap;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.skill-description {
+  display: flex;
+  flex-wrap: nowrap;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+html {
+  font-size: 1rem;
 }
 
 @layer utilities {

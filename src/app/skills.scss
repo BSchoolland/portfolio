@@ -1,14 +1,17 @@
+
+
 // a decorative div that goes in the top right corner of the screen, at 45 degrees
+$CORNER_SIZE: 200px;
 .corner {
     position: absolute;
     top: 0;
     right: 0;
-    width: 300px;
-    height: 300px;
+    width: $CORNER_SIZE;
+    height: $CORNER_SIZE;
     background-color: $tertiary;
     transform: rotate(45deg);
-    margin-right: -150px;
-    margin-top: -150px;
+    margin-right: calc(-1 * $CORNER_SIZE / 2);
+    margin-top: calc(-1 * $CORNER_SIZE / 2);
     z-index: -1;
 }
 
@@ -17,7 +20,7 @@
     margin-top: 50px;
     width: 100%;
     // a gradient background that goes from the secondary color to the tertiary color
-    background: linear-gradient(30deg, $secondary 50%, $tertiary 110%);
+    background: linear-gradient(30deg, $text 50%, $tertiary 130%);
     transform: skewY(-8deg);
     z-index: -1;
 }
@@ -32,20 +35,22 @@
 .decorative-slant {
     position: relative;
     margin-top: 8vw; // balance the padding of the inverse-slant
-    margin-bottom: -8vw; // the margin accounts for the skewing
+    margin-bottom: -9vw; // the margin accounts for the skewing
     width: 30%;
-    height: 100px;
+    height: 80px;
     background-color: $tertiary;
     transform: skewY(-8deg);
     z-index: 100;
 }
 
-$stripe-width: 2px;
+$stripe-width: 3px;
+$line-opacity: 0.1;
 .top-down-stripe-1 {
     position: absolute;
     width: $stripe-width;
     height: 200%;
     background-color: $primary;
+    opacity: $line-opacity;
     top: 0;
     left: 8%;
     transform: translateX(-8%);
@@ -55,7 +60,7 @@ $stripe-width: 2px;
 .top-down-stripe-2 {
     position: absolute;
     width: $stripe-width;
-
+    opacity: $line-opacity;
     height: 200%;
     background-color: $primary;
     top: 0;
@@ -69,23 +74,23 @@ $stripe-width: 2px;
     width: $stripe-width;
     height: 200%;
     background-color: $primary;
-
+    opacity: $line-opacity;
     top: 0;
-    left: 35%;
-    transform: translateX(-35%);
+    left: 36%;
+    transform: translateX(-36%);
     z-index: -1;
 }
 
 .top-down-stripe-4 {
     position: absolute;
     width: $stripe-width;
-
+    opacity: $line-opacity;
     height: 200%;
     background-color: $primary;
 
     top: 0;
-    right: 35%;
-    transform: translateX(35%);
+    right: 36%;
+    transform: translateX(36%);
     z-index: -1;
 }
 
@@ -93,12 +98,75 @@ $stripe-width: 2px;
     margin-left: 10%;
     color: $action;
     font-weight: 900;
+    font-size: 3rem;
 }
 
 .skills-subtitle {
-    margin-top: 0;
-    margin-left: 12%;
-    width: 50%;
+    margin: 0;
+    padding-left: 12%;
+    width: 70%;
     color: $primary;
     font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    flex-wrap: wrap;
+    margin-left: 8%;
+    width: 100%;
+}
+
+.skill-card {
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 100px;
+
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.skill-top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: nowrap;
+}
+
+.skill-image {
+    width: 50px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.skill-name {
+    display: flex;
+    flex-wrap: nowrap;
+    color: $action;
+    font-weight: 900;
+    font-size: 1.25rem;
+}
+
+.skill-title {
+    display: flex;
+    flex-wrap: nowrap;
+    color: $primary;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.skill-description {
+    display: flex;
+    flex-wrap: nowrap;
+    color: $primary;
+    font-weight: 400;
+    font-size: 1rem;
 }

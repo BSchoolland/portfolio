@@ -9,11 +9,11 @@
     flex-direction: column;
     align-items: flex-start;
     padding-top: 7%;
-    padding-left: 13%;
+    padding-left: 10%;
     width: 50%;
 }
 
-.title {
+.title1 {
     margin: 0;
     line-height: 1.25;
     background: linear-gradient(to right, #000000, #7281CF);
@@ -21,7 +21,18 @@
     -webkit-text-fill-color: transparent;
     font-weight: 900;
     // font-family: "outfit";
-    // font-size: 115px;
+    font-size: 100px;
+}
+
+.title2 {
+    margin: 0;
+    line-height: 1.25;
+    background: linear-gradient(to right, #000000, #7281CF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    // font-family: "outfit";
+    font-size: 80px;
 }
 
 .subtitle {
@@ -33,7 +44,7 @@
 
 .mini-projects-container {
     display: flex;
-    margin-top: 4%;
+    margin-top: 10%;
     margin-left: 10%;
     width: 25%;
     height: 0; // padding trick to get a square div
@@ -60,17 +71,18 @@
     font-size: 24px;
     font-weight: 900;
     margin: 10px;
+    font-size: 18px;
 }
 
 .mini-projects-description {
     color: $primary;
-    font-size: 18px;
+    font-size: 14px;
     margin: 30px;
 }
 
 .goto-next-project {
     color: $action;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 900;
     margin: 10px;
     text-align: right;

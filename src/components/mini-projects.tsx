@@ -58,12 +58,12 @@ const MiniProjects = () => {
     <section className="mini-projects-container">
       <div className="mini-projects">
         <div className="mini-projects-top-bar">
-            <p className="mini-projects-title text-[32px]">
+            <p className="mini-projects-title">
             {projects[activeProject].projectTitle}
             </p>
-            <button className='goto-next-project text-[32px]' onClick={gotoNextProject}>Next</button>
+            <button className='goto-next-project' onClick={gotoNextProject}>Next</button>
         </div>
-        <p className="mini-projects-description text-[24px]">
+        <p className="mini-projects-description">
           {projects[activeProject].projectDescription}
         </p>
       </div>
