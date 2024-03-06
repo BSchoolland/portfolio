@@ -33,8 +33,20 @@ $CORNER_SIZE: 200px;
 }
 
 .decorative-slant {
-    position: relative;
-    margin-top: 8vw; // balance the padding of the inverse-slant
+    position: absolute;
+    
+    width: 30%;
+    height: 80px;
+    background-color: $tertiary;
+    transform: skewY(-8deg);
+    z-index: 100;
+}
+
+.decorative-slant2 {
+    position: absolute;
+    // put it on the right side of the screen
+    right: 0;
+    margin-top: -6vw; // balance the padding of the inverse-slant
     margin-bottom: -9vw; // the margin accounts for the skewing
     width: 30%;
     height: 80px;
@@ -140,8 +152,8 @@ $line-opacity: 0.1;
 }
 
 .skill-image {
-    width: 50px;
-    height: auto;
+    width: auto;
+    height: 50px;
     margin-bottom: 20px;
     margin-right: 20px;
 }
@@ -170,3 +182,4 @@ $line-opacity: 0.1;
     font-weight: 400;
     font-size: 1rem;
 }
+

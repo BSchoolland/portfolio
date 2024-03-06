@@ -26,7 +26,7 @@ const SkillsSection = () => {
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis varius quam quisque id diam vel quam. Bibendum arcu vitae elementum curabitur. Nunc sed id semper risus in hendrerit gravida. Aliquet risus feugiat in ante metus dictum."
         },
         {
-            image: "",
+            image: "/images/Python-icon.png",
             imageAlt: "Python icon",
             name: "Python, C++, LabView, LUA...",
             title: "Self Taught Programmer",
@@ -64,6 +64,7 @@ const SkillsSection = () => {
                 </div>
         </div>
       </div>
+      <div className='decorative-slant2'></div>
     </section>
   );
 };

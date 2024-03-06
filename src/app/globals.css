@@ -118,8 +118,18 @@
 }
 
 .decorative-slant {
-  position: relative;
-  margin-top: 8vw;
+  position: absolute;
+  width: 30%;
+  height: 80px;
+  background-color: #003483;
+  transform: skewY(-8deg);
+  z-index: 100;
+}
+
+.decorative-slant2 {
+  position: absolute;
+  right: 0;
+  margin-top: -6vw;
   margin-bottom: -9vw;
   width: 30%;
   height: 80px;
@@ -221,8 +231,8 @@
 }
 
 .skill-image {
-  width: 50px;
-  height: auto;
+  width: auto;
+  height: 50px;
   margin-bottom: 20px;
   margin-right: 20px;
 }
