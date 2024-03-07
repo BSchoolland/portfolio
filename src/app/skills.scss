@@ -20,7 +20,7 @@ $CORNER_SIZE: 200px;
     margin-top: 50px;
     width: 100%;
     // a gradient background that goes from the secondary color to the tertiary color
-    background: linear-gradient(30deg, $text 50%, $tertiary 130%);
+    background: linear-gradient(30deg, $tertiary -100%, $text 50%, $tertiary 130%);
     transform: skewY(-8deg);
     z-index: -1;
 }
