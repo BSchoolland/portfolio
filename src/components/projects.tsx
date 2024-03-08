@@ -2,32 +2,71 @@
 import React, { use } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import Image from "next/image";
 
 const ProjectsSection = () => {
   const [direction, setDirection] = useState("");
   const projects = [
     {
-      title: "CommunityALI",
+      title: "PROJECT #001 - CommunityALI",
+      icons: ["React", "HTML", "CSS", "JavaScript", "MongoDB", "Node.js"],
       github: "https://github.com/Community-ALI/CommunityALI-Website",
       liveSite: "https://communityali.org/",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio nec nunc tincidunt tincidunt",
     },
     {
-      title: "Club Website",
+      title: "PROJECT #002 - Club Application",
+      icons: ["Next.js", "JavaScript", "PostgreSQL"],
       github: "https://github.com/Community-ALI/club-website",
       liveSite: "https://club-application-c15c28325e63.herokuapp.com/",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio nec nunc tincidunt tincidunt",
     },
     {
-      title: "Wrecking Wheels",
+      title: "PROJECT #003 - Wrecking Wheels",
+      icons: ["JavaScript", "HTML", "CSS"],
       github: "https://github.com/BSchoolland/Vehicle-Building-Game",
       liveSite: "https://wreckingwheels.com/",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio nec nunc tincidunt tincidunt",
     },
   ];
+  const icons = [
+    {
+      name: "React",
+      icon: "/images/React-icon.png",
+    },
+    {
+      name: "HTML",
+      icon: "/images/html-icon.png",
+    },
+    {
+      name: "CSS",
+      icon: "/images/css-icon.png",
+    },
+    {
+      name: "JavaScript",
+      icon: "/images/javascript-icon.png",
+    },
+    {
+      name: "MongoDB",
+      icon: "/images/mongodb-icon.png",
+    },
+    {
+      name: "Node.js",
+      icon: "/images/nodejs-icon.png",
+    },
+    {
+      name: "PostgreSQL",
+      icon: "/images/postgresql-icon.png",
+    },
+    {
+      name: "Next.js",
+      icon: "/images/nextjs-icon.png",
+    },
+  ];
+
   const [activeIndex, setActiveIndex] = useState(0);
   function getIndexPlusX(x: number) {
     // this function will return the index of the project that is x away from the active index (positive or negative)
@@ -44,6 +83,7 @@ const ProjectsSection = () => {
       // wrap that distance around to the bottom of the array
       newIndex = distanceAboveHighestIndex;
     }
+    console.log(newIndex);
     return newIndex;
   }
   useEffect(() => {
@@ -51,6 +91,32 @@ const ProjectsSection = () => {
       setDirection("");
     }, 1000);
   }, [activeIndex]);
+  function projectCard(project: any) {
+    return (
+      <div className="project">
+        <h1 className="project-title">{project.title}</h1>
+        <div className="project-icons">
+          {project.icons.map((icon: string) => {
+            return (
+              <div className="project-icon">
+                <Image
+                  width={45}
+                  height={45}
+                  src={icons.find((i) => i.name === icon)?.icon ?? ""}
+                  alt={icon}
+                />
+              </div>
+            );
+          })}
+        </div>
+        <p className="project-description">{project.description}</p>
+        {/* <a href={project.github}>Github</a>
+        <a href={project.liveSite} target="_blank" rel="noopener noreferrer">
+          Live Site
+        </a> */}
+      </div>
+    );
+  }
   return (
     <section className="projects-section">
       <div className="projects-title-container">
@@ -59,9 +125,7 @@ const ProjectsSection = () => {
       <div className="projects-container">
         {/* show the active item */}
         <div className={`slider ${direction}`}>
-          <div className="project">
-            <h1>{projects[activeIndex].title}</h1>
-          </div>
+          {projectCard(projects[getIndexPlusX(-2)])}
         </div>
         <div
           className={`slider ${direction}`}
@@ -69,19 +133,13 @@ const ProjectsSection = () => {
             setActiveIndex(getIndexPlusX(-1)), setDirection("slide-left");
           }}
         >
-          <div className="project">
-            <h1>{projects[getIndexPlusX(-1)].title}</h1>
-          </div>
+          {projectCard(projects[getIndexPlusX(-1)])}
         </div>
         <div className={`slider ${direction}`}>
-          <div className="project">
-            <h1>{projects[activeIndex].title}</h1>
-          </div>
+          {projectCard(projects[getIndexPlusX(0)])}
         </div>
         <div className={`slider ${direction}`}>
-          <div className="project">
-            <h1>{projects[getIndexPlusX(1)].title}</h1>
-          </div>
+          {projectCard(projects[getIndexPlusX(1)])}
         </div>
         <div
           className={`slider ${direction}`}
@@ -89,14 +147,10 @@ const ProjectsSection = () => {
             setActiveIndex(getIndexPlusX(1)), setDirection("slide-right");
           }}
         >
-          <div className="project">
-            <h1>{projects[getIndexPlusX(2)].title}</h1>
-          </div>
+          {projectCard(projects[getIndexPlusX(2)])}
         </div>
         <div className={`slider ${direction}`}>
-          <div className="project">
-            <h1>{projects[getIndexPlusX(1)].title}</h1>
-          </div>
+          {projectCard(projects[getIndexPlusX(3)])}
         </div>
       </div>
     </section>
