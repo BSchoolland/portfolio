@@ -120,7 +120,7 @@ const ProjectsSection = () => {
   return (
     <section className="projects-section">
       <div className="projects-title-container">
-        <span className="projects-title">Larger Projects</span>
+        <span className="projects-title">Projects & Pursuits</span>
       </div>
       <div className="projects-container">
         {/* show the active item */}
