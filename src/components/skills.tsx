@@ -48,7 +48,7 @@ const SkillsSection = () => {
     })
 
   return (
-    <section>
+    <section className='skills-section'>
       <div className="decorative-slant"></div>
       <div className="slant">
       <div className="top-down-stripe-1"></div>

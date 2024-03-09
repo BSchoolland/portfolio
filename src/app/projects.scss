@@ -58,6 +58,8 @@
     }
 }
 
+
+
 .slider {
     position: relative;
     width: 50%;
@@ -119,4 +121,52 @@
     width: 90%;
     z-index: 100;
     text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.progress-bar {
+    animation: fadeIn 1s ease-in-out;
+    width: 60%;
+    padding: 1em;
+}
+
+.invisible {
+    display: none;
+}
+
+.progress-bar-title {
+    margin-bottom: 0.5em;
+    color: $primary;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    width: 10%;
+    border-color: $primary;
+    border-width: 1px;
+    height: 100%;
+    background-color: #ddd;
+    display: inline-block;
+}
+
+.filled {
+    background-color: #007bff;
 }

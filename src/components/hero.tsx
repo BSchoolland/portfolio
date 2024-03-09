@@ -3,9 +3,7 @@ import MiniProjects from "./mini-projects";
 const HeroSection = () => {
   return (
     <section className="hero-section">
-        <div className="corner"> 
-            <h1>hi there</h1>
-        </div>
+        <div className="corner"></div>
         <div className="title-container">
           <span className="title1">Benjamin</span>
           <span className="title2">Schoolland</span>
