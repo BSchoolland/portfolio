@@ -118,7 +118,6 @@ const ProjectsSection = () => {
       // wrap that distance around to the bottom of the array
       newIndex = distanceAboveHighestIndex;
     }
-    console.log(newIndex);
     return newIndex;
   }
   useEffect(() => {

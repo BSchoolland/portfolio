@@ -1,8 +1,11 @@
 import React from "react";
 import MiniProjects from "./mini-projects";
+import MovingStars from "@/mini-projects/comet-component";
+import 
 const HeroSection = () => {
   return (
     <section className="hero-section">
+        
         <div className="corner"></div>
         <div className="title-container">
           <span className="title1">Benjamin</span>
@@ -13,6 +16,7 @@ const HeroSection = () => {
             </p>
         </div>
         <MiniProjects />
+        <MovingStars />
     </section>
   );
 };

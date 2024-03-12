@@ -24,14 +24,14 @@ $CORNER_SIZE: 200px;
     // a gradient background that goes from the secondary color to the tertiary color
     background: linear-gradient(30deg, $tertiary -100%, $text 50%, $tertiary 130%);
     transform: skewY(-8deg);
-    z-index: -1;
+    z-index: 1;
 }
 
 .inverse-slant {
     padding-top: 10vw; // the padding accounts for the skewing
     width: 100%;
     transform: skewY(8deg);
-    z-index: -1;
+    z-index: 1;
 }
 
 .decorative-slant {
