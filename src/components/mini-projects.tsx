@@ -1,14 +1,16 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
+import WordsearchSolver from "@/mini-projects/wordsearch-solver";
 
 const MiniProjects = () => {
+  const [showComponent, setShowComponent] = useState(false);
   const [activeProject, setActiveProject] = useState(0);
   const projects = [
     {
       projectTitle: "Mini-Project 1/7 - Word Search Solver",
       projectDescription: "Originally made in Python, this project is a word search solver.  Type a word to find and the program will highlight the word in the word search!",
-      projectComponent: "WordSearchSolver",
+      projectComponent: <WordsearchSolver />,
     },
     {
       projectTitle: "Mini-Project 2/7 - 2D Platformer",
@@ -37,6 +39,7 @@ const MiniProjects = () => {
   ];
   const gotoNextProject = () => {
     let currentProject = activeProject;
+    setShowComponent(false);
     if (currentProject === projects.length - 1) {
       setActiveProject(0);
     } else {
@@ -44,21 +47,62 @@ const MiniProjects = () => {
     }
   }
 
+  const miniProjectsRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+      const handleResize = () => {
+        if (miniProjectsRef.current) {
+          console.log(miniProjectsRef.current.offsetWidth);
+          miniProjectsRef.current.style.display = "flex";
+          // set width to equal height in pixels
+          // miniProjectsRef.current.style.height = `${miniProjectsRef.current.offsetWidth}px`;
+          if (showComponent) {
+            // translate down half the height of the mini-projects
+            // miniProjectsRef.current.style.transform = `translateY(${miniProjectsRef.current.offsetWidth / 2.1}px)`;
+          }
+          else {
+            // miniProjectsRef.current.style.transform = `translateY(${miniProjectsRef.current.offsetWidth / 3}px)`;
+          }
+        }
+        else {
+          console.log("miniProjectsRef.current is null");
+        }
+      };
+
+
+      // Set initial height
+      handleResize();
+      // update height on div resize
+      const resizeObserver = new ResizeObserver(handleResize);
+      if (miniProjectsRef.current) {
+        resizeObserver.observe(miniProjectsRef.current);
+      }
+
+      // Clean up event listener
+      return () => window.removeEventListener('resize', handleResize);
+  }, [showComponent]);
+
   return (
-    <section className="mini-projects-container">
-      <div className="mini-projects">
-        <div className="mini-projects-top-bar">
+    <div className={showComponent ? "mini-projects-expanded" : "mini-projects-container"}>
+      <div className="mini-projects-top-bar">
             <p className="mini-projects-title">
             {projects[activeProject].projectTitle}
             </p>
             <button className='goto-next-project' onClick={gotoNextProject}>Next</button>
         </div>
-        <p className="mini-projects-description">
-          {projects[activeProject].projectDescription}
-        </p>
+      <div ref={miniProjectsRef} className="mini-projects">
+        
+        <div style={{width: "100%", height: "100%"}}>
+        {showComponent ? 
+          projects[activeProject].projectComponent : 
+          <p className="mini-projects-description" onClick={() => setShowComponent(true)}>
+            {projects[activeProject].projectDescription}
+          </p>
+        }
+        </div>
         
       </div>
-    </section>
+    </div>
   );
 };
 

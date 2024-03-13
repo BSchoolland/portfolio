@@ -1,7 +1,6 @@
 import React from "react";
 import MiniProjects from "./mini-projects";
 import MovingStars from "@/mini-projects/comet-component";
-import 
 const HeroSection = () => {
   return (
     <section className="hero-section">
