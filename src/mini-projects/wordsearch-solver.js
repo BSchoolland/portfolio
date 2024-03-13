@@ -249,7 +249,7 @@ function WordsearchSolver() {
     <div className='mini-project-box'>
       <div className="wordsearch-box" ref={wordsearchRef}></div>
       <form className="wordsearch-form" ref={formRef}>
-        <input className="wordsearch-input" type="text" ref={wordRef} name="word" required></input>
+        <input className="wordsearch-input" placeholder="python, react, yourWordHere" type="text" ref={wordRef} name="word" required></input>
         <button className="wordsearch-submit" type="submit">Find</button>
       </form>
       <p className="wordsearch-not-found" ref={notFoundRef}></p>
