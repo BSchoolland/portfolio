@@ -45,6 +45,8 @@
 
 .mini-projects-container, .mini-projects-expanded {
   display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
   flex-direction: column;
   height: 0;
   background-color: #001534;
@@ -63,7 +65,7 @@
   margin-top: 2%;
   margin-left: 0%;
   width: 45%;
-  padding-bottom: 45%;
+  padding-bottom: 40%;
 }
 
 .mini-projects {

@@ -44,6 +44,8 @@
 
 .mini-projects-container, .mini-projects-expanded {
     display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
     flex-direction: column;
     height: 0; // padding trick to get a square div
     background-color: $secondary;
@@ -62,7 +64,7 @@
     margin-top: 2%;
     margin-left: 0%;
     width: 45%;
-    padding-bottom: 45%; 
+    padding-bottom: 40%; 
 }
 
 .mini-projects {
@@ -74,6 +76,8 @@
     align-items: center;
     justify-content: center;
 }
+
+
 
 .mini-projects-top-bar {
     display: flex;

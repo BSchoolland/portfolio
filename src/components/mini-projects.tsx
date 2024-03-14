@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useState } from "react";
 
 import WordsearchSolver from "@/mini-projects/wordsearch-solver";
-
+import Simple2DPlatformer from "@/mini-projects/2d-platformer.js";
 const MiniProjects = () => {
   const [showComponent, setShowComponent] = useState(false);
   const [activeProject, setActiveProject] = useState(0);
@@ -15,6 +15,7 @@ const MiniProjects = () => {
     {
       projectTitle: "Mini-Project 2/7 - 2D Platformer",
       projectDescription: "A simple 2D platformer game made using JavaScript.  Use the arrow keys to move and jump!",
+      projectComponent: <Simple2DPlatformer />,
     },
     {
       projectTitle: "Mini-Project 3/7 - Connect 4 bot",
@@ -52,7 +53,6 @@ const MiniProjects = () => {
   useEffect(() => {
       const handleResize = () => {
         if (miniProjectsRef.current) {
-          console.log(miniProjectsRef.current.offsetWidth);
           miniProjectsRef.current.style.display = "flex";
           // set width to equal height in pixels
           // miniProjectsRef.current.style.height = `${miniProjectsRef.current.offsetWidth}px`;
@@ -64,9 +64,7 @@ const MiniProjects = () => {
             // miniProjectsRef.current.style.transform = `translateY(${miniProjectsRef.current.offsetWidth / 3}px)`;
           }
         }
-        else {
-          console.log("miniProjectsRef.current is null");
-        }
+
       };
 
 
