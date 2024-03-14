@@ -1,8 +1,9 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 
-import WordsearchSolver from "@/mini-projects/wordsearch-solver";
+import WordsearchSolver from "@/mini-projects/wordsearch-solver.js";
 import Simple2DPlatformer from "@/mini-projects/2d-platformer.js";
+import MazeSolver from "@/mini-projects/maze-solver.js";
 const MiniProjects = () => {
   const [showComponent, setShowComponent] = useState(false);
   const [activeProject, setActiveProject] = useState(0);
@@ -35,7 +36,8 @@ const MiniProjects = () => {
     },
     {
       projectTitle: "Mini-Project 7/7 - BFS Maze Solver",
-      projectDescription: "This project allows you to place walls, and then uses a breadth-first search algorithm to find the shortest path from the start to the end."
+      projectDescription: "This project allows you to place walls, and then uses a breadth-first search algorithm to find the shortest path from the start to the end.",
+      projectComponent: <MazeSolver />,
     },
   ];
   const gotoNextProject = () => {

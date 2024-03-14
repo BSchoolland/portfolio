@@ -42,6 +42,14 @@
     color: $text;
 }
 
+.mini-project-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
 .mini-projects-container, .mini-projects-expanded {
     display: flex;
     overflow-x: hidden;
