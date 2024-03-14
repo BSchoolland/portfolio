@@ -205,6 +205,10 @@ function WordsearchSolver() {
 
   function UpdateNotFoundList(notFoundList) {
     let notFound = notFoundRef.current;
+    if (notFoundList.length === 0) {
+      notFound.textContent = "";
+      return;
+    }
     notFound.textContent = "Words not in list:  ";
     for (let i = 0; i < notFoundList.length; i++) {
       notFound.textContent += notFoundList[i] + ", ";
@@ -215,7 +219,7 @@ function WordsearchSolver() {
 
   useEffect(() => {
     let notFound = notFoundRef.current;
-    notFound.textContent = "Words not in list: ";
+    notFound.textContent = "";
     displayWordsearch(wordsearch);
     let notFoundList = [];
     UpdateNotFoundList(notFoundList);

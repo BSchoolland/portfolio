@@ -4,6 +4,7 @@ import React, { useRef, useEffect, useState } from "react";
 import WordsearchSolver from "@/mini-projects/wordsearch-solver.js";
 import Simple2DPlatformer from "@/mini-projects/2d-platformer.js";
 import MazeSolver from "@/mini-projects/maze-solver.js";
+import SudokuSolver from "@/mini-projects/sudoku-solver.js";
 const MiniProjects = () => {
   const [showComponent, setShowComponent] = useState(false);
   const [activeProject, setActiveProject] = useState(0);
@@ -29,6 +30,7 @@ const MiniProjects = () => {
     {
       projectTitle: "Mini-Project 5/7 - Sudoku Solver",
       projectDescription: "Originally made in Python, this project is a sudoku solver.  Choose from several example puzzles or input your own!",
+      projectComponent: <SudokuSolver />,
     },
     {
       projectTitle: "Mini-Project 6/7 - Spaceship Game",
