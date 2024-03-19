@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Image from "next/image";
 import ProjectProgressBar from "./progressbar";
-import { get } from "http";
 
 const ProjectsSection = () => {
   const [direction, setDirection] = useState("");
@@ -17,7 +16,7 @@ const ProjectsSection = () => {
       github: "https://github.com/Community-ALI/CommunityALI-Website",
       liveSite: "https://communityali.org/",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio nec nunc tincidunt tincidunt",
+        "A student led project to help students at MJC find opportunities to get involved in clubs and organizations.",
       steps: [
         "Building a team",
         "Learning HTML, CSS, JavaScript",
@@ -35,7 +34,7 @@ const ProjectsSection = () => {
       github: "https://github.com/Community-ALI/club-website",
       liveSite: "https://club-application-c15c28325e63.herokuapp.com/",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio nec nunc tincidunt tincidunt",
+        "A website that streamlines the process of creating a club at MJC and provides club leadership with a streamlined platform for managing all paperwork related to their club.",
       steps: [
         "Creating an actionable plan",
         "Creating Design in Figma",
@@ -55,16 +54,30 @@ const ProjectsSection = () => {
       github: "https://github.com/BSchoolland/Vehicle-Building-Game",
       liveSite: "https://wreckingwheels.com/",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio nec nunc tincidunt tincidunt",
+        "A physics based browser game where players build vehicles from blocks and complete ever more difficult levels.",
       steps: [
         "Experimenting with Matter.js",
-        "Creating a basic building system",
+        "Creating building system",
         "Adding block types",
         "Creating levels",
         "Hosting through Hostinger VPS",
         "In progress: Waiting for user feedback before adding more features",
       ],
       progress: 60,
+    },
+    {
+      title: "PROJECT #004 - Lego Sorter",
+      icons: ["Python", "Arduino", "FreeCAD", "Machine-Learning"],
+      github: "https://github.com/BSchoolland/lego-sorter",
+      liveSite: "",
+      description:
+        "Automated lego sorter that uses computer vision to sort lego bricks by color and shape.",
+      steps: [
+        "Learning FreeCAD",
+        "Assembling sorter",
+        "In progress: Developing machine learning algorithm",
+      ],
+      progress: 40,
     },
   ];
   const icons = [
@@ -74,32 +87,48 @@ const ProjectsSection = () => {
     },
     {
       name: "HTML",
-      icon: "/images/html-icon.png",
+      icon: "/images/icons/html-icon.png",
     },
     {
       name: "CSS",
-      icon: "/images/css-icon.png",
+      icon: "/images/icons/css-icon.png",
     },
     {
       name: "JavaScript",
-      icon: "/images/javascript-icon.png",
+      icon: "/images/icons/javascript-icon.png",
     },
     {
       name: "MongoDB",
-      icon: "/images/mongodb-icon.png",
+      icon: "/images/icons/mongodb-icon.png",
     },
     {
       name: "Node.js",
-      icon: "/images/nodejs-icon.png",
+      icon: "/images/icons/nodejs-icon.png",
     },
     {
       name: "PostgreSQL",
-      icon: "/images/postgresql-icon.png",
+      icon: "/images/icons/postgresql-icon.png",
     },
     {
       name: "Next.js",
-      icon: "/images/nextjs-icon.png",
+      icon: "/images/icons/nextjs-icon.png",
     },
+    {
+      name: "Python",
+      icon: "/images/icons/python-icon.png",
+    },
+    {
+      name: "Arduino",
+      icon: "/images/icons/arduino-icon.png",
+    },
+    {
+      name: "FreeCAD",
+      icon: "/images/icons/freecad-icon.png",
+    },
+    {
+      name: "Machine-Learning",
+      icon: "/images/Machine-Learning-icon.png",
+    }
   ];
   
   const [activeIndex, setActiveIndex] = useState(0);

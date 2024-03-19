@@ -10,8 +10,8 @@ const HeroSection = () => {
           <span className="title1">Benjamin</span>
           <span className="title2">Schoolland</span>
           <p className="subtitle ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+          I'm an aspiring software developer with experience in fullstack web development and a strong foundation across multiple programming languages and frameworks. I'm intensely focused on creating programming projects I can be proud of, from robotics to web development.  
+
             </p>
         </div>
         <MiniProjects />

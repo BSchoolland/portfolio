@@ -166,7 +166,7 @@ const MovingStars = (params) => {
       star1.y = largerStar.y;
       if (star1.radius >= MAX_STAR_RADIUS) { // don't let stars get too big
         if (star1.isBigStar) { // then it's okay
-          
+          star1.radius = bigStarRadius;
         } 
         else {
           star1.radius = MAX_STAR_RADIUS;

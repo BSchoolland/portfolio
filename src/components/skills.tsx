@@ -3,36 +3,43 @@ import Image from "next/image";
 
 const SkillsSection = () => {
   
-    const skills = [
-        {
-            image: "/images/React-icon.png",
-            imageAlt: "react icon",
-            name: "React, Node.js and SQL",
-            title: "Web Developer",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis varius quam quisque id diam vel quam. Bibendum arcu vitae elementum curabitur. Nunc sed id semper risus in hendrerit gravida. Aliquet risus feugiat in ante metus dictum."
-        },
-        {
-            image: "/images/Machine-Learning-icon.png",
-            imageAlt: "AI icon",
-            name: "Machine Learning and AI",
-            title: "AI Entusiast",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis varius quam quisque id diam vel quam. Bibendum arcu vitae elementum curabitur. Nunc sed id semper risus in hendrerit gravida. Aliquet risus feugiat in ante metus dictum."
-        },
-        {
-            image: "/images/Robotics-icon.png",
-            imageAlt: "Robotics icon",
-            name: "Robotics and Engineering",
-            title: "Robotics Club Mentor",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis varius quam quisque id diam vel quam. Bibendum arcu vitae elementum curabitur. Nunc sed id semper risus in hendrerit gravida. Aliquet risus feugiat in ante metus dictum."
-        },
-        {
-            image: "/images/Python-icon.png",
-            imageAlt: "Python icon",
-            name: "Python, C++, LabView, LUA...",
-            title: "Self Taught Programmer",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis varius quam quisque id diam vel quam. Bibendum arcu vitae elementum curabitur. Nunc sed id semper risus in hendrerit gravida. Aliquet risus feugiat in ante metus dictum."
-        },
-    ]
+  const skills = [
+    {
+        image: "/images/React-icon.png",
+        imageAlt: "react icon",
+        name: "React, Node.js and SQL",
+        title: "Web Developer",
+        description: "My experience with web development began in 2022 with the student led CommunityALI project.  As with everything else, I learned by doing, and by now have built several sites and even a browser game, with a focus on functionality and backend."
+    },
+
+    {
+        image: "/images/Robotics-icon.png",
+        imageAlt: "Robotics icon",
+        name: "Robotics and Engineering",
+        title: "Robotics Club Mentor",
+        description: "Something I’ve always enjoyed doing is teaching the fundamentals of coding through robotics.  My experience as both a VEX robotics coach and FRC mentor has allowed by to solidify my own knowledge by passing it on to others."
+    },
+    {
+      image: "/images/Machine-Learning-icon.png",
+      imageAlt: "AI icon",
+      name: "Machine Learning and AI",
+      title: "AI Enthusiast",
+      description: "This is an area I'm actively exploring. I have a lot of experience prompting models like ChatGPT and utilizing AI tools. I have also begun working on a machine learning algorithm for sorting lego bricks by color and shape and I hope to have a completed project or two in this area soon."  
+  },
+    {
+        image: "/images/Python-icon.png",
+        imageAlt: "Python icon",
+        name: "Python, LUA, JavaScript…",
+        title: "Self Taught Programmer",
+        description: "As far back as I can remember, I have always had a project in the works.  Even at the age of 10, I was building my own games in LUA.  Since then, I have continued to learn and grow, becoming confident in languages like python, Javascript and C++."
+    },
+]
+
+
+
+
+
+
 
     const skillCards = skills.map((skill, index) => {
         return (
@@ -58,7 +65,7 @@ const SkillsSection = () => {
         <div className="inverse-slant">
           
           <h1 className="skills-title">Skills</h1>
-          <h3 className="skills-subtitle">By far my most important skill is the ability and drive to constantly learn new frameworks, concepts, and programming languages.</h3>
+          <h3 className="skills-subtitle">By far my most valuable skill is the ability and drive to constantly learn new frameworks, concepts, and programming languages.</h3>
             <div className="skills-container">
                 {skillCards}
                 </div>
