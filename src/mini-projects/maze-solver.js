@@ -35,6 +35,9 @@ const MazeSolver = () => {
           class: square.class === 'wall' ? 'square' : 'wall'
         };
       }
+      
+      // findPath(squares);
+
       return square;
     }));
   };
@@ -113,7 +116,7 @@ const MazeSolver = () => {
 
   return (
     <div className='mini-project-box'>
-      <p className='maze-hint'>Click on the squares to create walls, then click start to find the path!</p>
+      <p className='maze-hint'>Click on the squares to create walls, then click start to find the best path!</p>
       <div id="grid" style={{ display: 'grid', gridTemplateColumns: `repeat(${gridWidth}, 0fr)` }}>
         {squares.map(square => (
           <div

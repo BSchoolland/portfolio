@@ -1,11 +1,17 @@
 
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import { eventEmitter } from "@/components/events";
+import { ST } from "next/dist/shared/lib/utils";
 
 const MovingStars = (params) => {
+  const mouseX = useRef(0);
+  const mouseY = useRef(0);
+  const click = useRef(true);
+  const bigStar = useRef(null);
+
   const canvasRef = useRef(null);
   const canvasRef2 = useRef(null);
-  const prevHugeStarRef = useRef(params.hugeStar);
   const STAR_DENSITY = useRef(5 * 10e7);
   const GRAVITATIONAL_CONSTANT = 6.6743e-11;
   const STAR_COUNT = 50;
@@ -23,6 +29,9 @@ const MovingStars = (params) => {
   let lastStarTime = 0;
   let top = 0;
 
+  const [bigStarRadius, setBigStarRadius] = useState(15);
+
+
   useEffect(() => {
     const canvas = canvasRef.current;
     const canvas2 = canvasRef2.current;
@@ -34,19 +43,6 @@ const MovingStars = (params) => {
     canvas2.height = parent.offsetHeight;
   }, []);
 
-  const handleScroll = () => {
-    const canvas = canvasRef.current;
-    const canvas2 = canvasRef2.current;
-    if (canvas) {
-      // Calculate the distance scrolled vertically
-      const scrollY = window.scrollY || window.pageYOffset;
-      // Set the position of the canvas relative to the viewport
-      canvas.style.top = `${scrollY}px`;
-      canvas2.style.top = `${scrollY}px`;
-
-      top = scrollY;
-    }
-  };
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -63,6 +59,70 @@ const MovingStars = (params) => {
     // Array to hold the stars' positions and velocities
     let stars = [];
 
+    // initalize a really big star
+    stars.push({
+      x: canvas.width / 2,
+      y: canvas.height / 2,
+      radius: 15,
+      vx: 0,
+      vy: 0,
+      tailLength: 0,
+      isFront: false,
+      isBigStar: true,
+    });
+
+    const handleScroll = () => {
+      const canvas = canvasRef.current;
+      const canvas2 = canvasRef2.current;
+      if (canvas) {
+        // Calculate the distance scrolled vertically
+        const scrollY = window.scrollY || window.pageYOffset;
+        // Set the position of the canvas relative to the viewport
+        canvas.style.top = `${scrollY}px`;
+        canvas2.style.top = `${scrollY}px`;
+  
+        top = scrollY;
+        if (scrollY > 0) {
+          // if the user scrolls, get rid of the big star
+          let oldStar = bigStar.current;
+          bigStar.current.isBigStar = false;
+
+          const interval = setInterval(() => {
+            if (oldStar.radius > 10) {
+              oldStar.radius -= 0.1;
+            } else {
+              clearInterval(interval);
+            }
+          }, 100);
+        }
+        // if the user scrolls back to the top, make a new big star
+        if (scrollY === 0){
+          // initalize a really big star
+          let star = ({
+            x: canvas.width / 2,
+            y: canvas.height / 2,
+            radius: 15,
+            vx: 0,
+            vy: 0,
+            tailLength: 0,
+            isFront: false,
+            isBigStar: true,
+          });
+          bigStar.current = star
+          stars.push(star)
+        }
+      }
+      // when the user scrolls, get rid of the big star
+      
+    };
+
+    bigStar.current = stars[0];
+
+    // keep track of the mouse position, and make it a big star
+    // const handleMouseMove = (e) => {
+    //   const x = e.clientX;
+    //   const y = e.clientY;
+      
     // Function to generate a random number within a range
     const random = (min, max) => Math.random() * (max - min) + min;
 
@@ -98,9 +158,6 @@ const MovingStars = (params) => {
       // Determine the position of the merged star based on the larger star
       const largerStar = star1.radius >= star2.radius ? star1 : star2;
       const smallerStar = star1 === largerStar ? star2 : star1;
-      if (prevHugeStarRef.current) {
-        mergedRadius = largerStar.radius;
-      }
       // Set the properties of the merged star (star1)
       star1.radius = mergedRadius;
       star1.vx = totalMomentumX / mergedRadius ** 3;
@@ -108,7 +165,12 @@ const MovingStars = (params) => {
       star1.x = largerStar.x;
       star1.y = largerStar.y;
       if (star1.radius >= MAX_STAR_RADIUS) { // don't let stars get too big
-        star1.radius = MAX_STAR_RADIUS;
+        if (star1.isBigStar) { // then it's okay
+          
+        } 
+        else {
+          star1.radius = MAX_STAR_RADIUS;
+        }
       }
       if (star1.radius >= MAX_STAR_RADIUS/2) { // don't let big stars go in front of text
         star1.isFront = false;
@@ -121,6 +183,10 @@ const MovingStars = (params) => {
 
     // Function to add a new star
     const addNewStar = () => {
+      // check how many stars are on the screen
+      if (stars.length > STAR_COUNT) {
+        return;
+      }
       const side = Math.floor(Math.random() * 4); // Randomly select a side (0-3) for star entry
       let x, y, vx, vy;
 
@@ -162,20 +228,8 @@ const MovingStars = (params) => {
         tailLength,
         isFront: random(0, 1) > 0.5,
       });
-
-      if (prevHugeStarRef.current) {
-        stars.push({
-          x: canvas.width / 2,
-          y: canvas.height / 2,
-          radius: 50,
-          vx: random(MIN_STAR_VELOCITY, MAX_STAR_VELOCITY),
-          vy: random(MIN_STAR_VELOCITY, MAX_STAR_VELOCITY),
-          tailLength: 0,
-          isFront: true,
-        });
-      }
     };
-
+    
     // Function to initialize stars
     const createStars = () => {
       for (let i = 0; i < STAR_COUNT; i++) {
@@ -216,8 +270,13 @@ const MovingStars = (params) => {
     // Function to update stars' positions and velocities
     const updateStars = () => {
       stars.forEach((star) => {
-        if (star.radius >= 50) {
-          star.radius += star.radius / 50;
+        if (star.isBigStar) {
+          // move to the mouse position
+          console.log(mouseX, mouseY);
+          star.x = mouseX.current;
+          star.y = mouseY.current;
+          // set the size
+
         } else {
           star.x += star.vx;
           star.y += star.vy;
@@ -348,6 +407,8 @@ const MovingStars = (params) => {
       requestAnimationFrame(animate);
     };
 
+    
+
     createStars();
     animate();
 
@@ -361,15 +422,56 @@ const MovingStars = (params) => {
       // window.location.reload();
     };
 
+    
+
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener('mousemove', function(e) {
+
+      mouseX.current = e.clientX;
+      mouseY.current = e.clientY;
+    });
+    // subscribe to the event emitter
+
+    const unsubscribe = eventEmitter.subscribe('onHoverEvent', (data) => {
+      // find the big star and make it invisible
+      let oldStar = bigStar.current;
+      bigStar.current.isBigStar = false;
+      oldStar.radius = 1;
+    });
+
+    const unsubscribe2 = eventEmitter.subscribe('onHoverOutEvent', (data) => {
+      // make the big star visible
+      let star = ({
+        x: canvas.width / 2,
+        y: canvas.height / 2,
+        radius: 15,
+        vx: 0,
+        vy: 0,
+        tailLength: 0,
+        isFront: false,
+        isBigStar: true,
+      });
+      
+      bigStar.current = star
+      stars.push(star);
+    });
+      
+
+
 
     // Cleanup function
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
+      // unsubscribe from the eventEmitter
+      unsubscribe();
+      unsubscribe2();
+      // remove all the stars
+      stars = [];
+
     };
-  }, [MIN_STAR_VELOCITY, lastStarTime]);
+  }, [MIN_STAR_VELOCITY, lastStarTime, bigStarRadius]);
 
   return (
     <div>

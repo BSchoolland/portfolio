@@ -1,6 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.navbar {
+  display: flex;
+  justify-content: right;
+  padding: 10px;
+  padding-right: 150px;
+}
+
+.navlink {
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #003483;
+}
+
+.navlink::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  background-color: blue;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navlink:hover::before {
+  opacity: 1;
+}
+
+.navlink:hover {
+  color: white;
+  font-weight: bold;
+}
+
 .hero-section {
   display: flex;
   flex-direction: row;
@@ -11,7 +49,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 7%;
+  padding-top: 4%;
   padding-left: 10%;
   width: 50%;
 }
@@ -62,14 +100,14 @@
 }
 
 .mini-projects-container {
-  margin-top: 10%;
+  margin-top: 6%;
   margin-left: 10%;
   width: 25%;
   padding-bottom: 25%;
 }
 
 .mini-projects-expanded {
-  margin-top: 2%;
+  margin-top: 0;
   margin-left: 0%;
   width: 45%;
   padding-bottom: 40%;
@@ -720,45 +758,45 @@
 }
 
 .square {
-  background-color: rgb(68, 68, 68);
+  background-color: rgb(255, 255, 255);
   position: relative;
-  width: 25px;
-  height: 25px;
-  border: 1px solid #ccc;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000000;
   cursor: crosshair;
 }
 
 .character {
-  background-color: rgb(0, 0, 85);
+  background-color: rgb(0, 0, 190);
   position: relative;
-  width: 25px;
-  height: 25px;
-  border: 1px solid #ccc;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000000;
 }
 
 .goal {
-  background-color: rgb(0, 85, 0);
+  background-color: rgb(255, 251, 0);
   position: relative;
-  width: 25px;
-  height: 25px;
-  border: 1px solid #ccc;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000000;
 }
 
 .path {
-  background-color: rgb(85, 0, 0);
+  background-color: rgb(0, 199, 17);
   position: relative;
-  width: 25px;
-  height: 25px;
-  border: 1px solid #ccc;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000000;
   cursor: crosshair;
 }
 
 .wall {
   background-color: rgb(75, 49, 11);
   position: relative;
-  width: 25px;
-  height: 25px;
-  border: 1px solid #ccc;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000000;
   cursor: crosshair;
 }
 

@@ -57,45 +57,47 @@
     grid-gap: 1px; 
 }
 
+$squareSize: 30px;
+
 .square {
-    background-color: rgb(68, 68, 68);
+    background-color: rgb(255, 255, 255);
     position: relative;
-    width: 25px;
-    height: 25px;
-    border: 1px solid #ccc;
+    width: $squareSize;
+    height: $squareSize;
+    border: 1px solid #000000;
     cursor: crosshair;
 }
 
 .character {
-    background-color: rgb(0, 0, 85);
+    background-color: rgb(0, 0, 190);
     position: relative;
-    width: 25px;
-    height: 25px;
-    border: 1px solid #ccc;
+    width: $squareSize;
+    height: $squareSize;
+    border: 1px solid #000000;
 }
 
 .goal {
-    background-color: rgb(0, 85, 0);
+    background-color: rgb(255, 251, 0);
     position: relative;
-    width: 25px;
-    height: 25px;
-    border: 1px solid #ccc;
+    width: $squareSize;
+    height: $squareSize;
+    border: 1px solid #000000;
 }
 
 .path {
-    background-color: rgb(85, 0, 0);
+    background-color: rgb(0, 199, 17);
     position: relative;
-    width: 25px;
-    height: 25px;
-    border: 1px solid #ccc;
+    width: $squareSize;
+    height: $squareSize;
+    border: 1px solid #000000;
     cursor: crosshair;
 }   
 
 .wall {
     background-color: rgb(75, 49, 11);
     position: relative;
-    width: 25px;
-    height: 25px;
-    border: 1px solid #ccc;
+    width: $squareSize;
+    height: $squareSize;
+    border: 1px solid #000000;
     cursor: crosshair;
 }

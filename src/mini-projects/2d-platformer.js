@@ -317,7 +317,7 @@ function Simple2DPlatformer() {
         }
       });
       // make sure the page cannot be manually scrolled
-      document.body.style.overflow = "hidden";
+      // document.body.style.overflow = "hidden";
       // make sure the page cannot be zoomed
       document.body.style.touchAction = "none";
 
@@ -331,7 +331,7 @@ function Simple2DPlatformer() {
         document.removeEventListener("keyup", handleKeyUp);
       };
     }, []);
-
+ 
     return (
       <div className="mini-project-box">
         <h1 ref={messageRef}></h1>
