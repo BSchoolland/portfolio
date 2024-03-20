@@ -201,6 +201,11 @@
   transform: skewY(-8deg);
   z-index: 1;
 }
+@media (max-width: 1024px) {
+  .slant {
+    padding-bottom: 100px;
+  }
+}
 
 .inverse-slant {
   padding-top: 10vw;
@@ -303,6 +308,12 @@
   margin-left: 8%;
   width: 100%;
 }
+@media (max-width: 1024px) {
+  .skills-container {
+    flex-direction: column;
+    margin-left: 15%;
+  }
+}
 
 .skill-card {
   padding-left: 2%;
@@ -313,6 +324,12 @@
   flex-direction: column;
   justify-content: left;
   align-items: left;
+}
+@media (max-width: 1024px) {
+  .skill-card {
+    width: 70%;
+    margin-top: 25px;
+  }
 }
 
 .skill-top-bar {

@@ -25,6 +25,9 @@ $CORNER_SIZE: 200px;
     background: linear-gradient(30deg, $tertiary -100%, $text 50%, $tertiary 130%);
     transform: skewY(-8deg);
     z-index: 1;
+    @media (max-width: $tablet) {
+        padding-bottom: 100px;
+    }
 }
 
 .inverse-slant {
@@ -132,6 +135,10 @@ $line-opacity: 0.1;
     flex-wrap: wrap;
     margin-left: 8%;
     width: 100%;
+    @media (max-width: $tablet) {
+        flex-direction: column;
+        margin-left: 15%;
+    }
 }
 
 .skill-card {
@@ -144,6 +151,10 @@ $line-opacity: 0.1;
     flex-direction: column;
     justify-content: left;
     align-items: left;
+    @media (max-width: $tablet) {
+        width: 70%;
+        margin-top: 25px;
+    }
 }
 
 .skill-top-bar {
