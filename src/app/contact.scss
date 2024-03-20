@@ -26,6 +26,9 @@
     z-index: 1;
     padding: 20px;
     padding-top: 10px;
+    @media (max-width: $tablet) {
+        width: 75%;
+    }
 }
 
 .contact-title {

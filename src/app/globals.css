@@ -645,6 +645,11 @@
   padding: 20px;
   padding-top: 10px;
 }
+@media (max-width: 1024px) {
+  .contact-container {
+    width: 75%;
+  }
+}
 
 .contact-title {
   font-size: 2rem;
