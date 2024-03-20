@@ -38,6 +38,10 @@
     flex-wrap: nowrap;
     margin-top: 30px;
     width: 280%;
+    @media (max-width: $tablet) {
+        width: 560%;
+        padding-left: 80%;
+    }
 }
 
 @keyframes slideInLeft {
@@ -69,6 +73,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media (max-width: $tablet) {
+        width: 100%;
+    }
 }
 
 .project-link-container {

@@ -409,6 +409,12 @@
   margin-top: 30px;
   width: 280%;
 }
+@media (max-width: 1024px) {
+  .projects-container {
+    width: 560%;
+    padding-left: 80%;
+  }
+}
 
 @keyframes slideInLeft {
   0% {
@@ -435,6 +441,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 1024px) {
+  .slider {
+    width: 100%;
+  }
 }
 
 .project-link-container {
