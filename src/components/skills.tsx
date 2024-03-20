@@ -55,7 +55,7 @@ const SkillsSection = () => {
     })
 
   return (
-    <section className='skills-section'>
+    <section className='skills-section' id='about'>
       <div className="decorative-slant"></div>
       <div className="slant">
       <div className="top-down-stripe-1"></div>
@@ -64,11 +64,11 @@ const SkillsSection = () => {
           <div className="top-down-stripe-4"></div>
         <div className="inverse-slant">
           
-          <h1 className="skills-title">Skills</h1>
+          <h1 className="skills-title">About me and my skills</h1>
           <h3 className="skills-subtitle">By far my most valuable skill is the ability and drive to constantly learn new frameworks, concepts, and programming languages.</h3>
             <div className="skills-container">
                 {skillCards}
-                </div>
+            </div>
         </div>
       </div>
       <div className='decorative-slant2'></div>

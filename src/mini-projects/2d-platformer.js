@@ -183,7 +183,6 @@ function Simple2DPlatformer() {
               playerPosYRef.current = 0;
             } else {
               // Adjust position and speed based on collision
-              console.log("handling collision")
               handlePlatformCollision(platform);
             }
           }
@@ -331,10 +330,12 @@ function Simple2DPlatformer() {
         document.removeEventListener("keyup", handleKeyUp);
       };
     }, []);
- 
+    
+
     return (
       <div className="mini-project-box">
-        <h1 ref={messageRef}></h1>
+
+        <h1 ref={messageRef}>Use the arrow keys to move</h1>
 
         <img
           ref={guyRef}

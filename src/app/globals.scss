@@ -9,6 +9,12 @@ $tertiary: #003483;
 $text: #000000;
 $action: #00C2FF;
 
+
+//media queries
+$mobile: 768px;
+$tablet: 1024px;
+$desktop: 1440px;
+
 @import "./navbar.scss";
 @import "./hero.scss";
 @import "./skills.scss";
@@ -17,6 +23,9 @@ $action: #00C2FF;
 @import "./wordsearch.scss";
 @import "./maze.scss";
 @import "./sudoku.scss";
+
+
+
 
 body{
   overflow-x: hidden;

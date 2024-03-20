@@ -17,6 +17,7 @@ const ProjectsSection = () => {
       liveSite: "https://communityali.org/",
       description:
         "A student led project to help students at MJC find opportunities to get involved in clubs and organizations.",
+      date: "2022",
       steps: [
         "Building a team",
         "Learning HTML, CSS, JavaScript",
@@ -43,8 +44,6 @@ const ProjectsSection = () => {
         "Utilizing AWS SES to send pdfs of applications",
         "Conducting user testing",
         "Done: Deployed website to Heroku",
-
-        
       ],
       progress: 100,
     },
@@ -67,7 +66,7 @@ const ProjectsSection = () => {
     },
     {
       title: "PROJECT #004 - Lego Sorter",
-      icons: ["Python", "Arduino", "FreeCAD", "Machine-Learning"],
+      icons: ["Python", "Arduino", "FreeCAD", "Machine Learning"],
       github: "https://github.com/BSchoolland/lego-sorter",
       liveSite: "",
       description:
@@ -126,7 +125,7 @@ const ProjectsSection = () => {
       icon: "/images/icons/freecad-icon.png",
     },
     {
-      name: "Machine-Learning",
+      name: "Machine Learning",
       icon: "/images/Machine-Learning-icon.png",
     }
   ];
@@ -176,16 +175,24 @@ const ProjectsSection = () => {
                   height={45}
                   src={icons.find((i) => i.name === icon)?.icon ?? ""}
                   alt={icon}
+                  title={icon}
                 />
               </div>
             );
           })}
         </div>
         <p className="project-description">{project.description}</p>
-        {/* <a href={project.github}>Github</a>
-        <a href={project.liveSite} target="_blank" rel="noopener noreferrer">
+        <div className="project-link-container">
+        <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-github">
+          GitHub
+          </a>
+        {
+          project.liveSite !== "" && <a href={project.liveSite} target="_blank" rel="noopener noreferrer" className="project-link">
           Live Site
-        </a> */}
+        </a>
+        }
+        
+        </div>
         {/* if the index is the active index, show the progress bar otherwise, show it with a delay */}
         {renderProgressBar(project)}
         
@@ -196,9 +203,9 @@ const ProjectsSection = () => {
 
   
   return (
-    <section className="projects-section">
+    <section id="projects" className="projects-section">
       <div className="projects-title-container">
-        <span className="projects-title">Projects & Pursuits</span>
+        <span className="projects-title">Projects</span>
       </div>
       <div className="projects-container">
         {/* show the active item */}
@@ -230,7 +237,20 @@ const ProjectsSection = () => {
         <div className={`slider ${direction}`}>
           {projectCard(projects[getIndexPlusX(3)])}
         </div>
+        <button className="slider-button-l" onClick={() => {
+        setActiveIndex(getIndexPlusX(-1));
+        setDirection("slide-left");
+      }}>
+        {"<-"}
+      </button>
+      <button className="slider-button-r" onClick={() => {
+        setActiveIndex(getIndexPlusX(1));
+        setDirection("slide-right");
+      }}>
+        {"->"}
+      </button>
       </div>
+      
     </section>
   );
 };

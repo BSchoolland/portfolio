@@ -62,14 +62,78 @@
 
 .slider {
     position: relative;
-    width: 50%;
-    height: 350px;
+    width: 50%; 
+    height: 400px;
     padding: 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.project-link-container {
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.project-link {
+    // these should look like buttons
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: $primary;
+    color: $text;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: $action;
+    color: $text;
+}
+
+.project-github {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: blue;
+    color: $primary;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-github:hover {
+    background-color: purple;
+    color: $text;
+}
+
+.slider-button-l, .slider-button-r {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; // the button is positioned over top of the carousel
+    transform: translateY(-15px);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $action;
+    font-size: 50px;
+}
+
+.slider-button-l {
+    left: 5px;
+}
+
+.slider-button-r {
+    right: 5px;
+}
+
 .project {
     width: 98%;
     height: 100%;
