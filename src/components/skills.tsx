@@ -52,7 +52,7 @@ const SkillsSection = () => {
                 <p className="skill-description">{skill.description}</p>
             </div>
         )
-    })
+    }) 
 
   return (
     <section className='skills-section' id='skills'>

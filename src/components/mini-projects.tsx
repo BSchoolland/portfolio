@@ -11,7 +11,7 @@ const MiniProjects = () => {
   const projects = [
     {
       projectTitle: "Mini-Project 1/4 - Word Search Solver",
-      projectDescription: "Originally made in Python, this project is a word search solver.  Type a word to find and the program will highlight the word in the word search!",
+      projectDescription: "This wordsearch solver is a recreation of the first program outside school I ever made with python. Type in a word and then ",
       projectComponent: <WordsearchSolver />,
     },
     {
@@ -29,7 +29,7 @@ const MiniProjects = () => {
     // },
     {
       projectTitle: "Mini-Project 3/4 - Sudoku Solver",
-      projectDescription: "Originally made in Python, this project is a sudoku solver.  Choose from several example puzzles or input your own!",
+      projectDescription: "Originally made in Python, this project is a sudoku solver. It uses a backtracking algorithm to solve the puzzle.",
       projectComponent: <SudokuSolver />,
     },
     // {

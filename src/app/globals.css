@@ -339,6 +339,11 @@
   font-weight: 900;
   font-size: 3rem;
 }
+@media (max-width: 768px) {
+  .skills-title {
+    margin-top: 50px;
+  }
+}
 
 .skills-subtitle {
   margin: 0;
@@ -347,6 +352,12 @@
   color: #ffffff;
   font-weight: 600;
   font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .skills-subtitle {
+    width: 85%;
+    font-size: 1.25rem;
+  }
 }
 
 .skills-container {
