@@ -12,7 +12,7 @@ $action: #00C2FF;
 
 //media queries
 $mobile: 768px;
-$tablet: 1024px;
+$tablet: 1224px;
 $desktop: 1440px;
 
 @import "./navbar.scss";
@@ -27,16 +27,14 @@ $desktop: 1440px;
 
 
 
-body{
+body, html {
   overflow-x: hidden;
-  // prevent scrolling to the right on mobile
-  overflow-y: scroll;
-}
-
-html {
   font-size: 1rem;
+  overflow-y: scroll;
+  @media (max-width: $mobile) {
+    padding-bottom: 5000px;
+  }
 }
-
 
 @layer utilities {
   .text-balance {

@@ -48,6 +48,9 @@ $CORNER_SIZE: 200px;
     background-color: $tertiary;
     transform: skewY(-8deg);
     z-index: 100;
+    @media (max-width: $mobile) {
+        display: none;
+      }
 }
 
 .decorative-slant2 {
@@ -61,6 +64,9 @@ $CORNER_SIZE: 200px;
     background-color: $tertiary;
     transform: skewY(-8deg);
     z-index: 100;
+    @media (max-width: $mobile) {
+        display: none;
+      }
 }
 
 $stripe-width: 3px;

@@ -96,10 +96,16 @@ const MiniProjects = () => {
         
         <div style={{width: "100%", height: "100%"}}>
         {showComponent ? 
+        
           projects[activeProject].projectComponent : 
-          <p className="mini-projects-description" onClick={() => setShowComponent(true)}>
-            {projects[activeProject].projectDescription}
-          </p>
+          <div>
+            <p className="mini-projects-description" onClick={() => setShowComponent(true)}>
+              {projects[activeProject].projectDescription}
+            </p>
+            <div style={{display: "flex", justifyContent: "center"}}>
+              <button className="mini-projects-expand-button" onClick={() => setShowComponent(true)}>View</button>
+            </div>
+          </div>
         }
         </div>
         

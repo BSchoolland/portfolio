@@ -77,6 +77,9 @@
     background-color: $secondary;
     border-radius: 30px;
     transition: margin-top 0.5s, margin-left 0.5s, width 0.5s, padding-bottom 0.5s; // Add transition
+    // @media (max-width: $mobile) {
+    //     overflow-y: scroll;
+    //   }
 }
 
 .mini-projects-container {
@@ -86,7 +89,7 @@
     padding-bottom: 25%; 
     @media (max-width: $tablet) {
         width: 50%;
-        padding-bottom: 50%;
+        padding-bottom: 40%;
         margin-left: 25%;
     }
     @media (max-width: $mobile) {
@@ -147,6 +150,19 @@
     color: $primary;
     font-size: 14px;
     margin: 30px;
+}
+
+.mini-projects-expand-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: $action;
+    border-radius: 20px;
+    color: $text;
+    // margin-left: 50%;
 }
 
 .goto-next-project {

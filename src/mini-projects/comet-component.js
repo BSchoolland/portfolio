@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { eventEmitter } from "@/components/events";
 import { ST } from "next/dist/shared/lib/utils";
 
+
 const MovingStars = (params) => {
   const mouseX = useRef(0);
   const mouseY = useRef(0);
@@ -14,7 +15,7 @@ const MovingStars = (params) => {
   const canvasRef2 = useRef(null);
   const STAR_DENSITY = useRef(5 * 10e7);
   const GRAVITATIONAL_CONSTANT = 6.6743e-11;
-  const STAR_COUNT =  50;
+  const STAR_COUNT = Math.max(Math.floor(window.innerWidth / 50), 10);
   const MAX_STAR_RADIUS = 10;
   const MIN_STAR_RADIUS = 1;
   const MAX_STAR_VELOCITY = 1.25;
@@ -59,17 +60,20 @@ const MovingStars = (params) => {
     // Array to hold the stars' positions and velocities
     let stars = [];
 
-    // initalize a really big star
-    stars.push({
-      x: canvas.width / 2,
-      y: canvas.height / 2,
-      radius: 15,
-      vx: 0,
-      vy: 0,
-      tailLength: 0,
-      isFront: false,
-      isBigStar: true,
-    });
+    // if the user does not have a touchscreen
+    if (!('ontouchstart' in window)) {
+      // initialize a really big star
+      stars.push({
+        x: canvas.width / 2,
+        y: canvas.height / 2,
+        radius: 15,
+        vx: 0,
+        vy: 0,
+        tailLength: 0,
+        isFront: false,
+        isBigStar: true,
+      });
+    }
 
     const handleScroll = () => {
       const canvas = canvasRef.current;
@@ -96,7 +100,7 @@ const MovingStars = (params) => {
           }, 100);
         }
         // if the user scrolls back to the top, make a new big star
-        if (scrollY === 0){
+        if (scrollY === 0 && !('ontouchstart' in window)){
           // initalize a really big star
           let star = ({
             x: canvas.width / 2,

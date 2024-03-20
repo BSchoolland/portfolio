@@ -17,7 +17,7 @@ const NavBar = () => {
       onMouseLeave={() => eventEmitter.emit("onHoverOutEvent")}>
         Projects
       </a>
-      <a className="navlink" href="#resume"
+      <a className="navlink" href="/Benjamin_Schoolland_Resume.pdf"
       onMouseOver={() => eventEmitter.emit("onHoverEvent")}
       onMouseLeave={() => eventEmitter.emit("onHoverOutEvent")}>
         Resume
