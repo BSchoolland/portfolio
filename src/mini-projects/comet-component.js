@@ -14,7 +14,7 @@ const MovingStars = (params) => {
   const canvasRef2 = useRef(null);
   const STAR_DENSITY = useRef(5 * 10e7);
   const GRAVITATIONAL_CONSTANT = 6.6743e-11;
-  const STAR_COUNT = 1// 50;
+  const STAR_COUNT =  50;
   const MAX_STAR_RADIUS = 10;
   const MIN_STAR_RADIUS = 1;
   const MAX_STAR_VELOCITY = 1.25;

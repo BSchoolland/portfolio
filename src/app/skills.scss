@@ -15,6 +15,9 @@ $CORNER_SIZE: 200px;
     margin-right: calc(-1 * $CORNER_SIZE / 2);
     margin-top: calc(-1 * $CORNER_SIZE / 2);
     z-index: -1;
+    @media (max-width: $mobile) {
+        display: none;
+    }
 }
 
 // another div that goes between the hero section and the skills section

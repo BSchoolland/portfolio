@@ -5,6 +5,9 @@
     justify-content: center;
     margin: 20px;
     color: $primary;
+    @media (max-width: $mobile) {
+        font-size: 14px;
+    }
 }
 
 .maze-button-container {
@@ -57,7 +60,10 @@
     grid-gap: 1px; 
 }
 
+
 $squareSize: 30px;
+$mobileSquareSize: 25px;
+
 
 .square {
     background-color: rgb(255, 255, 255);
@@ -66,6 +72,10 @@ $squareSize: 30px;
     height: $squareSize;
     border: 1px solid #000000;
     cursor: crosshair;
+    @media (max-width: $mobile) {
+        width: $mobileSquareSize;
+        height: $mobileSquareSize;
+    }
 }
 
 .character {
@@ -74,6 +84,10 @@ $squareSize: 30px;
     width: $squareSize;
     height: $squareSize;
     border: 1px solid #000000;
+    @media (max-width: $mobile) {
+        width: $mobileSquareSize;
+        height: $mobileSquareSize;
+    }
 }
 
 .goal {
@@ -82,6 +96,10 @@ $squareSize: 30px;
     width: $squareSize;
     height: $squareSize;
     border: 1px solid #000000;
+    @media (max-width: $mobile) {
+        width: $mobileSquareSize;
+        height: $mobileSquareSize;
+    }
 }
 
 .path {
@@ -91,6 +109,10 @@ $squareSize: 30px;
     height: $squareSize;
     border: 1px solid #000000;
     cursor: crosshair;
+    @media (max-width: $mobile) {
+        width: $mobileSquareSize;
+        height: $mobileSquareSize;
+    }
 }   
 
 .wall {
@@ -100,4 +122,8 @@ $squareSize: 30px;
     height: $squareSize;
     border: 1px solid #000000;
     cursor: crosshair;
+    @media (max-width: $mobile) {
+        width: $mobileSquareSize;
+        height: $mobileSquareSize;
+    }
 }

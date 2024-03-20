@@ -116,7 +116,7 @@ const MazeSolver = () => {
 
   return (
     <div className='mini-project-box'>
-      <p className='maze-hint'>Click on the squares to create walls, then click start to find the best path!</p>
+      <p className='maze-hint'>Click on the squares to create walls, then click the button to find the best path!</p>
       <div id="grid" style={{ display: 'grid', gridTemplateColumns: `repeat(${gridWidth}, 0fr)` }}>
         {squares.map(square => (
           <div
@@ -127,7 +127,7 @@ const MazeSolver = () => {
         ))}
       </div>
       <div className='maze-button-container'>
-      <button className='maze-start' onClick={findPath}>Start</button>
+      <button className='maze-start' onClick={findPath}>Find Path</button>
       <button className='maze-reset' onClick={initializeSquares}>Reset</button>
       </div>
     </div>

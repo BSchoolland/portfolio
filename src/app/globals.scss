@@ -29,6 +29,8 @@ $desktop: 1440px;
 
 body{
   overflow-x: hidden;
+  // prevent scrolling to the right on mobile
+  overflow-y: scroll;
 }
 
 html {

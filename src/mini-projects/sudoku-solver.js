@@ -175,7 +175,6 @@ const SudokuSolver = () => {
 
   return (
     <div className="sudoku-solver">
-      <h2>Sudoku Solver</h2>
       <div className="sudoku-container">
         {sudoku.map((row, rowIndex) => (
           <div className="sudoku-row" key={`row-${rowIndex}`}>
@@ -194,13 +193,14 @@ const SudokuSolver = () => {
           </div>
         ))}
       </div>
-      <button className="solve-button" onClick={solveSudoku}>
-        Solve
-      </button>
-      <button className="reset-button" onClick={resetSudoku}>
-        Reset
-      </button>
-      {isSolved && <p>Solved!</p>}
+      <div className="sudoku-buttons">
+        <button className="solve-button" onClick={solveSudoku}>
+          Solve
+        </button>
+        <button className="reset-button" onClick={resetSudoku}>
+          Reset
+        </button>
+      </div>
     </div>
   );
 };

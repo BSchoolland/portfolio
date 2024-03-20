@@ -335,7 +335,7 @@ function Simple2DPlatformer() {
     return (
       <div className="mini-project-box">
 
-        <h1 ref={messageRef}>Use the arrow keys to move</h1>
+        <h1 style={{color: "white"}} ref={messageRef}>Use the arrow keys to move</h1>
 
         <img
           ref={guyRef}

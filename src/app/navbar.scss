@@ -4,13 +4,24 @@
     justify-content: right;
     padding: 10px;
     padding-right: 150px;
+    @media (max-width: $mobile) {
+        padding-right: 0px;
+    }
 }
 
-.navlink {
+
+
+.navlink, .desktop-navlink {
     position: relative;
     padding-left: 10px;
     padding-right: 10px;
     color: $tertiary;
+}
+
+.desktop-navlink {
+    @media (max-width: $mobile) {
+        display: none;
+    }
 }
 
 .navlink::before {

@@ -5,14 +5,14 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <a
-        className="navlink"
+        className="desktop-navlink"
         href="#skills"
         onMouseOver={() => eventEmitter.emit("onHoverEvent")}
         onMouseLeave={() => eventEmitter.emit("onHoverOutEvent")}
       >
-        Skils
+        Skills
       </a>
-      <a className="navlink" href="#projects"
+      <a className="desktop-navlink" href="#projects"
       onMouseOver={() => eventEmitter.emit("onHoverEvent")}
       onMouseLeave={() => eventEmitter.emit("onHoverOutEvent")}>
         Projects
