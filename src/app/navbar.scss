@@ -1,0 +1,49 @@
+.navbar {
+    // put items on the right
+    display: flex;
+    justify-content: right;
+    padding: 10px;
+    padding-right: 150px;
+    @media (max-width: $mobile) {
+        padding-right: 0px;
+    }
+}
+
+
+
+.navlink, .desktop-navlink {
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: $tertiary;
+}
+
+.desktop-navlink {
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.navlink::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: blue;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navlink:hover::before {
+    opacity: 1;
+}
+
+.navlink:hover {
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+$primary: #ffffff;
+$secondary: #001534;
+$tertiary: #003483;
+$text: #000000;
+$action: #00C2FF;
+
+
+//media queries
+$mobile: 768px;
+$tablet: 1224px;
+$desktop: 1440px;
+
+@import "./navbar.scss";
+@import "./hero.scss";
+@import "./skills.scss";
+@import "./projects.scss";
+@import "./contact.scss";
+@import "./wordsearch.scss";
+@import "./maze.scss";
+@import "./sudoku.scss";
+
+
+
+
+body, html {
+  overflow-x: hidden;
+  font-size: 1rem;
+  overflow-y: scroll;
+  @media (max-width: $mobile) {
+    padding-bottom: 5000px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

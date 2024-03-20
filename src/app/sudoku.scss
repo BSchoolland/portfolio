@@ -1,0 +1,119 @@
+.sudoku-solver {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sudoku-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 0fr);
+  // grid-gap: 2px;
+}
+
+.sudoku-row {
+  display: flex;
+  flex-direction: row;
+  // overflow: none;
+  // grid-gap: 2px;
+}
+
+/* Right borders for 3rd and 6th cells in a row */
+.sudoku-cell:nth-child(3),
+.sudoku-cell:nth-child(6) {
+  border-right: 3px solid black;
+}
+
+/* Bottom borders for cells in the 3rd and 6th rows */
+.sudoku-row:nth-child(3) .sudoku-cell,
+.sudoku-row:nth-child(6) .sudoku-cell {
+  border-bottom: 3px solid black;
+}
+
+.sudoku-box {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 0fr);
+  // grid-gap: 2px;
+  border-width: 2px;
+  border-color: black;
+}
+
+.sudoku-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-width: 1px;
+  border-color: black;
+}
+
+.sudoku-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.sudoku-cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  @media (max-width: $mobile) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.locked {
+  background-color: #cecece;
+}
+
+.solve-button {
+  color: $text;
+  width: 10%;
+  height: 10%;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: $action;
+  border: 1px solid $primary;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  @media (max-width: $mobile) {
+    width: 30%;
+  }
+}
+
+.reset-button {
+  color: $text;
+  width: 10%;
+  height: 10%;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: $action;
+  border: 1px solid $primary;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  @media (max-width: $mobile) {
+    width: 30%;
+  }
+}
+
+.sudoku-buttons {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}

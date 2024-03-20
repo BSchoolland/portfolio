@@ -1,0 +1,214 @@
+
+.skills-section {
+    margin-top: 100px;
+}
+// a decorative div that goes in the top right corner of the screen, at 45 degrees
+$CORNER_SIZE: 200px;
+.corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $CORNER_SIZE;
+    height: $CORNER_SIZE;
+    background-color: $tertiary;
+    transform: rotate(45deg);
+    margin-right: calc(-1 * $CORNER_SIZE / 2);
+    margin-top: calc(-1 * $CORNER_SIZE / 2);
+    z-index: -1;
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
+// another div that goes between the hero section and the skills section
+.slant {
+    margin-top: 50px;
+    width: 100%;
+    // a gradient background that goes from the secondary color to the tertiary color
+    background: linear-gradient(30deg, $tertiary -100%, $text 50%, $tertiary 130%);
+    transform: skewY(-8deg);
+    z-index: 1;
+    @media (max-width: $tablet) {
+        padding-bottom: 100px;
+    }
+}
+
+.inverse-slant {
+    padding-top: 10vw; // the padding accounts for the skewing
+    width: 100%;
+    transform: skewY(8deg);
+    z-index: 1;
+}
+
+.decorative-slant {
+    position: absolute;
+    
+    width: 30%;
+    height: 80px;
+    background-color: $tertiary;
+    transform: skewY(-8deg);
+    z-index: 100;
+    @media (max-width: $mobile) {
+        display: none;
+      }
+}
+
+.decorative-slant2 {
+    position: absolute;
+    // put it on the right side of the screen
+    right: 0;
+    margin-top: -6vw; // balance the padding of the inverse-slant
+    margin-bottom: -9vw; // the margin accounts for the skewing
+    width: 30%;
+    height: 80px;
+    background-color: $tertiary;
+    transform: skewY(-8deg);
+    z-index: 100;
+    @media (max-width: $mobile) {
+        display: none;
+      }
+}
+
+$stripe-width: 3px;
+$line-opacity: 0.1;
+.top-down-stripe-1 {
+    position: absolute;
+    width: $stripe-width;
+    height: 200%;
+    background-color: $primary;
+    opacity: $line-opacity;
+    top: 0;
+    left: 8%;
+    transform: translateX(-8%);
+    z-index: -1;
+}
+
+.top-down-stripe-2 {
+    position: absolute;
+    width: $stripe-width;
+    opacity: $line-opacity;
+    height: 200%;
+    background-color: $primary;
+    top: 0;
+    right: 8%;
+    transform: translateX(8%);
+    z-index: -1;
+}
+
+.top-down-stripe-3 {
+    position: absolute;
+    width: $stripe-width;
+    height: 200%;
+    background-color: $primary;
+    opacity: $line-opacity;
+    top: 0;
+    left: 36%;
+    transform: translateX(-36%);
+    z-index: -1;
+}
+
+.top-down-stripe-4 {
+    position: absolute;
+    width: $stripe-width;
+    opacity: $line-opacity;
+    height: 200%;
+    background-color: $primary;
+
+    top: 0;
+    right: 36%;
+    transform: translateX(36%);
+    z-index: -1;
+}
+
+.skills-title {
+    margin-left: 10%;
+    color: $action;
+    font-weight: 900;
+    font-size: 3rem;
+    @media (max-width: $mobile) {
+        margin-top: 50px;
+    }
+}
+
+.skills-subtitle {
+    margin: 0;
+    padding-left: 12%;
+    width: 70%;
+    color: $primary;
+    font-weight: 600;
+    font-size: 1.5rem;
+    @media (max-width: $mobile) {
+        width: 85%;
+        font-size: 1.25rem;
+    }
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    flex-wrap: wrap;
+    margin-left: 8%;
+    width: 100%;
+    @media (max-width: $tablet) {
+        flex-direction: column;
+        margin-left: 15%;
+    }
+}
+
+.skill-card {
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 100px;
+
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    @media (max-width: $tablet) {
+        width: 70%;
+        margin-top: 25px;
+    }
+}
+
+.skill-top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: nowrap;
+}
+
+.skill-image {
+    width: auto;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.skill-name {
+    display: flex;
+    flex-wrap: nowrap;
+    color: $action;
+    font-weight: 900;
+    font-size: 1.25rem;
+}
+
+.skill-title {
+    display: flex;
+    flex-wrap: nowrap;
+    color: $primary;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.skill-description {
+    display: flex;
+    flex-wrap: nowrap;
+    color: $primary;
+    font-weight: 400;
+    font-size: 1rem;
+}
+

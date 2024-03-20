@@ -1,0 +1,270 @@
+.projects-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.projects-title-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.projects-title {
+    margin-top: 10%;
+    font-size: 3rem;
+    color: $text;
+    font-weight: 700;
+    position: relative;
+    height: 80px;
+    // transform: skewY(-4deg);
+    z-index: 100;
+    @media (max-width: $mobile) {
+        margin-top: 100px;
+    }
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 30px;
+    width: 280%;
+    @media (max-width: $tablet) {
+        width: 560%;
+        padding-left: 80%;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+.slider {
+    position: relative;
+    width: 50%; 
+    height: 400px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $tablet) {
+        width: 100%;
+    }
+}
+
+.project-link-container {
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.project-link {
+    // these should look like buttons
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: $primary;
+    color: $text;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    @media (max-width: $mobile) {
+        font-size: 0.8rem;
+    }
+}
+
+.project-link:hover {
+    background-color: $action;
+    color: $text;
+}
+
+.project-github {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: blue;
+    color: $primary;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    @media (max-width: $mobile) {
+        font-size: 0.8rem;
+    }
+}
+
+.project-github:hover {
+    background-color: purple;
+    color: $text;
+}
+
+.slider-button-l, .slider-button-r {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; // the button is positioned over top of the carousel
+    transform: translateY(-15px);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $action;
+    font-size: 50px;
+}
+
+.slider-button-l {
+    left: 5px;
+}
+
+.slider-button-r {
+    right: 5px;
+}
+
+.project {
+    width: 98%;
+    height: 100%;
+    background-color: $secondary;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide-right {
+    animation: slideInRight 1s ease-in-out;
+}
+
+.slide-left {
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.project-title {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: $primary;
+    font-weight: 700;
+    position: relative;
+    height: 40px;
+    z-index: 100;
+    @media (max-width: $mobile) {
+        font-size: 0.9rem;
+        margin-left: 10px;
+    }
+}
+
+.project-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    column-gap: 20px;
+    @media (max-width: $mobile) {
+        padding-left: 10px;
+        padding-right: 10px;
+        column-gap: 10px;
+    }
+}
+
+.project-description {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: $primary;
+    font-weight: 500;
+    position: relative;
+    height: 80px;
+    width: 90%;
+    z-index: 100;
+    text-align: center;
+    @media (max-width: $mobile) {
+        font-size: 0.7rem;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.progress-bar {
+    animation: fadeIn 1s ease-in-out;
+    width: 60%;
+    padding: 1em;
+    @media (max-width: $mobile) {
+        padding: 0.5em;
+    }
+}
+
+.invisible {
+    display: none;
+}
+
+.progress-bar-title {
+    margin-bottom: 0.5em;
+    color: $primary;
+    font-size: 0.7em;
+    text-align: center;
+    @media (max-width: $mobile) {
+        font-size: 0.6em;
+    }
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    width: 10%;
+    border-color: $primary;
+    border-width: 1px;
+    height: 100%;
+    background-color: #ddd;
+    display: inline-block;
+}
+
+.filled {
+    background-color: #007bff;
+}
