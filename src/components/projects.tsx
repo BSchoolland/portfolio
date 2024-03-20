@@ -169,7 +169,7 @@ const ProjectsSection = () => {
         <div className="project-icons">
           {project.icons.map((icon: string) => {
             return (
-              <div className="project-icon">
+              <div className="project-icon" key={icon}>
                 <Image
                   width={45}
                   height={45}
