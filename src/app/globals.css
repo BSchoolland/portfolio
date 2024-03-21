@@ -326,6 +326,11 @@
   transform: translateX(-8%);
   z-index: -1;
 }
+@media (max-width: 768px) {
+  .top-down-stripe-1 {
+    display: none;
+  }
+}
 
 .top-down-stripe-2 {
   position: absolute;
@@ -337,6 +342,11 @@
   right: 8%;
   transform: translateX(8%);
   z-index: -1;
+}
+@media (max-width: 768px) {
+  .top-down-stripe-2 {
+    display: none;
+  }
 }
 
 .top-down-stripe-3 {
@@ -350,6 +360,11 @@
   transform: translateX(-36%);
   z-index: -1;
 }
+@media (max-width: 768px) {
+  .top-down-stripe-3 {
+    display: none;
+  }
+}
 
 .top-down-stripe-4 {
   position: absolute;
@@ -361,6 +376,11 @@
   right: 36%;
   transform: translateX(36%);
   z-index: -1;
+}
+@media (max-width: 768px) {
+  .top-down-stripe-4 {
+    display: none;
+  }
 }
 
 .skills-title {
@@ -1220,11 +1240,6 @@
 body, html {
   overflow-x: hidden;
   font-size: 1rem;
-}
-@media (max-width: 768px) {
-  body, html {
-    padding-bottom: 5000px;
-  }
 }
 
 @layer utilities {

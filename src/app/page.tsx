@@ -8,15 +8,6 @@ import { use, useEffect } from "react";
 
 export default function Home() {
 
-  // prevent horizontal scrolling
-  useEffect(() => {
-    window.addEventListener('scroll', function() {
-      console.log(window.scrollX);
-      if (window.scrollX > 0) {
-        window.scrollTo(0, window.scrollY);
-      }
-    });
-  });
   return (
     <main className="">
 
