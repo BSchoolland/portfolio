@@ -4,6 +4,7 @@ import { eventEmitter } from "./events";
 const NavBar = () => {
   return (
     <div className="navbar">
+      <div className="corner"></div>
       <a
         className="desktop-navlink"
         href="#skills"

@@ -30,10 +30,11 @@ $desktop: 1440px;
 body, html {
   overflow-x: hidden;
   font-size: 1rem;
-  overflow-y: scroll;
+  // overflow-y: scroll;
   @media (max-width: $mobile) {
     padding-bottom: 5000px;
   }
+  // position: absolute;
 }
 
 @layer utilities {

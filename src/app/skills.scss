@@ -2,23 +2,7 @@
 .skills-section {
     margin-top: 100px;
 }
-// a decorative div that goes in the top right corner of the screen, at 45 degrees
-$CORNER_SIZE: 200px;
-.corner {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: $CORNER_SIZE;
-    height: $CORNER_SIZE;
-    background-color: $tertiary;
-    transform: rotate(45deg);
-    margin-right: calc(-1 * $CORNER_SIZE / 2);
-    margin-top: calc(-1 * $CORNER_SIZE / 2);
-    z-index: -1;
-    @media (max-width: $mobile) {
-        display: none;
-    }
-}
+
 
 // another div that goes between the hero section and the skills section
 .slant {

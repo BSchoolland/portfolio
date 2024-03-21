@@ -4,8 +4,6 @@ import MovingStars from "@/mini-projects/comet-component";
 const HeroSection = () => {
   return (
     <section className="hero-section">
-        
-        <div className="corner"></div>
         <div className="title-container">
           <span className="title1">Benjamin</span>
           <span className="title2">Schoolland</span>

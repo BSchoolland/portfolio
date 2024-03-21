@@ -2,9 +2,36 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    width: 100%;
+    overflow: hidden;
     // if the screen is tablet or smaller, change the direction to column
     @media (max-width: $tablet) {
         flex-direction: column;
+    }
+}
+
+// a decorative div that goes in the top right corner of the screen, at 45 degrees
+$CORNER_SIZE: 200px;
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid blue;
+  }
+.corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid transparent; /* The vertical height of the triangle */
+    border-right: 100px solid $tertiary; /* The color and horizontal width of the triangle */
+    border-top: 0px solid $tertiary; /* Extends the left border downwards, making the hypotenuse */
+    // rotate the triangle 45 degrees
+    // transform: rotate(90deg);
+    @media (max-width: $mobile) {
+        display: none;
     }
 }
 
