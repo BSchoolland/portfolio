@@ -54,10 +54,36 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  width: 100%;
+  overflow: hidden;
 }
 @media (max-width: 1224px) {
   .hero-section {
     flex-direction: column;
+  }
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid blue;
+}
+
+.corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid transparent; /* The vertical height of the triangle */
+  border-right: 100px solid #003483; /* The color and horizontal width of the triangle */
+  border-top: 0px solid #003483; /* Extends the left border downwards, making the hypotenuse */
+}
+@media (max-width: 768px) {
+  .corner {
+    display: none;
   }
 }
 
@@ -238,24 +264,6 @@
   margin-top: 100px;
 }
 
-.corner {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
-  background-color: #003483;
-  transform: rotate(45deg);
-  margin-right: -100px;
-  margin-top: -100px;
-  z-index: -1;
-}
-@media (max-width: 768px) {
-  .corner {
-    display: none;
-  }
-}
-
 .slant {
   margin-top: 50px;
   width: 100%;
@@ -318,6 +326,11 @@
   transform: translateX(-8%);
   z-index: -1;
 }
+@media (max-width: 768px) {
+  .top-down-stripe-1 {
+    display: none;
+  }
+}
 
 .top-down-stripe-2 {
   position: absolute;
@@ -329,6 +342,11 @@
   right: 8%;
   transform: translateX(8%);
   z-index: -1;
+}
+@media (max-width: 768px) {
+  .top-down-stripe-2 {
+    display: none;
+  }
 }
 
 .top-down-stripe-3 {
@@ -342,6 +360,11 @@
   transform: translateX(-36%);
   z-index: -1;
 }
+@media (max-width: 768px) {
+  .top-down-stripe-3 {
+    display: none;
+  }
+}
 
 .top-down-stripe-4 {
   position: absolute;
@@ -353,6 +376,11 @@
   right: 36%;
   transform: translateX(36%);
   z-index: -1;
+}
+@media (max-width: 768px) {
+  .top-down-stripe-4 {
+    display: none;
+  }
 }
 
 .skills-title {
@@ -1212,12 +1240,6 @@
 body, html {
   overflow-x: hidden;
   font-size: 1rem;
-  overflow-y: scroll;
-}
-@media (max-width: 768px) {
-  body, html {
-    padding-bottom: 5000px;
-  }
 }
 
 @layer utilities {

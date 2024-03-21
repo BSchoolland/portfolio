@@ -11,7 +11,7 @@ const MiniProjects = () => {
   const projects = [
     {
       projectTitle: "Mini-Project 1/4 - Word Search Solver",
-      projectDescription: "This wordsearch solver is a recreation of the first program outside school I ever made with python. Type in a word and then ",
+      projectDescription: "This wordsearch solver is a recreation of the first program outside school I ever made with python. Type in a word and then press find to see if it is in the wordsearch!",
       projectComponent: <WordsearchSolver />,
     },
     {

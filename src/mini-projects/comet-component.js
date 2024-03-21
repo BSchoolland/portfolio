@@ -89,8 +89,13 @@ const MovingStars = (params) => {
         top = scrollY;
         if (scrollY > 0) {
           // if the user scrolls, get rid of the big star
+          if (bigStar.current === undefined) {
+            return;
+          }
           let oldStar = bigStar.current;
+          
           bigStar.current.isBigStar = false;
+
 
           const interval = setInterval(() => {
             if (oldStar.radius > 10) {
