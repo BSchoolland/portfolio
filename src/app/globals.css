@@ -178,7 +178,7 @@
 @media (max-width: 768px) {
   .mini-projects-container {
     width: 80%;
-    padding-bottom: 80%;
+    padding-bottom: 100%;
     margin-left: 10%;
   }
 }
