@@ -26,7 +26,7 @@
   }
 }
 
-.navlink::before {
+.navlink::before, .desktop-navlink::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -41,11 +41,11 @@
   transition: opacity 0.3s ease;
 }
 
-.navlink:hover::before {
+.navlink:hover::before, .desktop-navlink:hover::before {
   opacity: 1;
 }
 
-.navlink:hover {
+.navlink:hover, .desktop-navlink:hover {
   color: white;
   font-weight: bold;
 }
@@ -178,7 +178,7 @@
 @media (max-width: 768px) {
   .mini-projects-container {
     width: 80%;
-    padding-bottom: 80%;
+    padding-bottom: 100%;
     margin-left: 10%;
   }
 }

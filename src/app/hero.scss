@@ -104,9 +104,6 @@ $CORNER_SIZE: 200px;
     background-color: $secondary;
     border-radius: 30px;
     transition: margin-top 0.5s, margin-left 0.5s, width 0.5s, padding-bottom 0.5s; // Add transition
-    // @media (max-width: $mobile) {
-    //     overflow-y: scroll;
-    //   }
 }
 
 .mini-projects-container {
@@ -121,7 +118,7 @@ $CORNER_SIZE: 200px;
     }
     @media (max-width: $mobile) {
         width: 80%;
-        padding-bottom: 80%;
+        padding-bottom: 100%;
         margin-left: 10%;
     }
 }
