@@ -19,6 +19,7 @@ const NavBar = () => {
         Projects
       </a>
       <a className="navlink" href="/Benjamin_Schoolland_Resume.pdf"
+      target="_blank"
       onMouseOver={() => eventEmitter.emit("onHoverEvent")}
       onMouseLeave={() => eventEmitter.emit("onHoverOutEvent")}>
         Resume
@@ -26,12 +27,14 @@ const NavBar = () => {
       <a
         className="navlink"
         href="https://www.linkedin.com/in/benjamin-schoolland-907455254/"
+        target="_blank"
         onMouseOver={() => eventEmitter.emit("onHoverEvent")}
         onMouseLeave={() => eventEmitter.emit("onHoverOutEvent")}
       >
         LinkedIn
       </a>
       <a className="navlink" href="https://github.com/BSchoolland"
+      target="_blank"
       onMouseOver={() => eventEmitter.emit("onHoverEvent")}
       onMouseLeave={() => eventEmitter.emit("onHoverOutEvent")}>
         GitHub
