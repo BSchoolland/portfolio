@@ -14,7 +14,7 @@ const ProjectsSection = () => {
       title: "PROJECT #001 - CommunityALI",
       icons: ["React", "HTML", "CSS", "JavaScript", "MongoDB", "Node.js"],
       github: "https://github.com/Community-ALI/CommunityALI-Website",
-      liveSite: "https://communityali.org/",
+      liveSite: "https://communityali.bschoolland.dev/",
       description:
         "A student led project to help students at MJC find opportunities to get involved in clubs and organizations.",
       date: "2022",
@@ -33,7 +33,7 @@ const ProjectsSection = () => {
       title: "PROJECT #002 - Club Application",
       icons: ["Next.js", "JavaScript", "PostgreSQL"],
       github: "https://github.com/Community-ALI/club-website",
-      liveSite: "https://club-application-c15c28325e63.herokuapp.com/",
+      liveSite: "https://club.bschoolland.dev/",
       description:
         "A website that streamlines the process of creating a club at MJC and provides club leadership with a streamlined platform for managing all paperwork related to their club.",
       steps: [
